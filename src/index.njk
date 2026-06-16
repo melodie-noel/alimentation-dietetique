@@ -8,17 +8,16 @@ ogTitle: "Mélodie Noël — Diététique & Hypnose"
 ogDescription: "Et si tout partait d'un déclic ? Diététique + hypnose à Maisons-Alfort."
 jsonld: true
 ---
-{% raw %}
 <main id="main">
 
 <!-- HERO -->
 <section class="hero">
   <div class="wrap"><div class="inner">
-    <p class="eyebrow">Diététique &amp; hypnose · Maisons-Alfort</p>
-    <h1>Et si tout partait<br>d'un <span class="hand">déclic</span></h1>
-    <p>Retrouvez énergie et fluidité en rééquilibrant votre <span class="kw">assiette</span> et votre <span class="kw">esprit</span>, sans prise de tête.</p>
+    <p class="eyebrow">{{ home.hero.eyebrow }}</p>
+    <h1>{{ home.hero.title | safe }}</h1>
+    <p>{{ home.hero.subtitle | safe }}</p>
     <div class="hero-cta">
-      <a class="btn btn-out btn-hero" href="accompagnements.html">Découvrir l'approche</a>
+      <a class="btn btn-out btn-hero" href="accompagnements.html">{{ home.hero.ctaLabel }}</a>
     </div>
   </div></div>
 </section>
@@ -43,21 +42,21 @@ jsonld: true
       </svg>
     </div>
     <div class="reveal-r" style="transition-delay:.12s">
-      <p class="eyebrow">Mon approche</p>
-      <h2>Deux outils, une même intention</h2>
-      <p style="color:var(--ink);max-width:34em">Soigner ce que vous mangez ne suffit pas toujours : il faut aussi apaiser ce qui vous pousse à manger. C'est là que mes deux métiers se rejoignent.</p>
-      <p class="approche-slogan">En route vers l'équilibre nutritionnel et émotionnel.</p>
+      <p class="eyebrow">{{ home.approche.eyebrow }}</p>
+      <h2>{{ home.approche.title }}</h2>
+      <p style="color:var(--ink);max-width:34em">{{ home.approche.intro }}</p>
+      <p class="approche-slogan">{{ home.approche.slogan }}</p>
       <div class="pills">
         <div class="pill">
           <span class="ic"><svg viewBox="0 0 48 48" fill="none"><path d="M24 7c-7 5-14 6-14 6v11c0 9 7 15 14 17 7-2 14-8 14-17V13s-7-1-14-6Z" stroke="#4E9D3F" stroke-width="2.6"/><path d="M18 24l4 4 8-9" stroke="#4E9D3F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div><span class="t">Le concret</span><h3>Diététique &amp; nutrition</h3><p>Des repères clairs, fondés sur la science et adaptés à votre vie. Pas de régime triste : des astuces simples, tenables, sans interdits.</p></div>
+          <div><span class="t">{{ home.approche.pills[0].tag }}</span><h3>{{ home.approche.pills[0].title }}</h3><p>{{ home.approche.pills[0].text }}</p></div>
         </div>
         <div class="pill">
           <span class="ic pulse"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="3" stroke="#4E9D3F" stroke-width="2.6"/><circle cx="24" cy="24" r="10" stroke="#4E9D3F" stroke-width="2.6"/><circle cx="24" cy="24" r="17" stroke="#4E9D3F" stroke-width="2.6"/></svg></span>
-          <div><span class="t">Le déclic</span><h3>Hypnose</h3><p>Un travail tout en douceur sur les émotions, les automatismes et les compulsions, pour que le changement vienne de l'intérieur — à votre rythme.</p></div>
+          <div><span class="t">{{ home.approche.pills[1].tag }}</span><h3>{{ home.approche.pills[1].title }}</h3><p>{{ home.approche.pills[1].text }}</p></div>
         </div>
       </div>
-      <p class="line">La différence entre tenir un régime… et changer pour de bon.</p>
+      <p class="line">{{ home.approche.line }}</p>
     </div>
   </div>
 </section>
@@ -65,14 +64,14 @@ jsonld: true
 <!-- POURQUOI -->
 <section class="pourquoi pad">
   <div class="wrap">
-    <div class="sec-head reveal"><p class="eyebrow">Pourquoi venir me voir</p><h2>Vous pourriez me consulter pour…</h2><p>Quel que soit votre point de départ, on construit ensemble une démarche qui vous ressemble.</p></div>
+    <div class="sec-head reveal"><p class="eyebrow">{{ home.raisons.eyebrow }}</p><h2>{{ home.raisons.title }}</h2><p>{{ home.raisons.intro }}</p></div>
     <div class="reasons cascade">
-      <div class="reason"><div class="d"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5C7 17 3.5 13.8 3.5 10.2 3.5 7.8 5.3 6 7.6 6c1.6 0 2.9.8 3.7 2 .8-1.2 2.1-2 3.7-2 2.3 0 4.1 1.8 4.1 4.2 0 3.6-3.5 6.8-8.5 10.3Z"/></svg></div><h3>Le poids &amp; l'image de soi</h3><p>Perdre du poids durablement et se réconcilier avec son corps, sans obsession des chiffres.</p></div>
-      <div class="reason"><div class="d"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.8" y="3.8" width="16.4" height="16.4" rx="4.5"/><path d="M12 8.2v7.6M8.2 12h7.6"/></svg></div><h3>Une pathologie</h3><p>Diabète, cholestérol, stéatose, intolérances : mieux vivre au quotidien par l'alimentation.</p></div>
-      <div class="reason"><div class="d"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 11.5h11l-1.2 7.5h-8.6z"/><path d="M7.2 11.5a4.8 4.8 0 0 1 9.6 0"/><path d="M12 4.2v2.3"/></svg></div><h3>Les compulsions sucrées</h3><p>Comprendre, apprivoiser puis transformer les pulsions — sans frustration ni culpabilité.</p></div>
-      <div class="reason"><div class="d"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13.8A7.5 7.5 0 1 1 10.2 4 6 6 0 0 0 20 13.8Z"/></svg></div><h3>Sommeil &amp; nourriture</h3><p>Démêler fatigue, grignotage et émotions pour retrouver de l'énergie.</p></div>
-      <div class="reason"><div class="d"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5v-7.5"/><path d="M12 13c-3 0-5-2-5-5 3 0 5 2 5 5Z"/><path d="M12 11.5c0-2.6 2-4.5 4.6-4.5 0 2.6-2 4.5-4.6 4.5Z"/></svg></div><h3>Un cap émotionnel</h3><p>Quand l'alimentation porte un poids émotionnel, on travaille la cause, pas juste le symptôme.</p></div>
-      <div class="reason"><div class="d"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.3" cy="8.8" r="2.5"/><circle cx="15.7" cy="8.8" r="2.5"/><path d="M3.6 19c0-2.7 2.1-4.4 4.7-4.4 1.2 0 2.3.4 3.1 1"/><path d="M12.6 15.6c.8-.6 1.9-1 3.1-1 2.6 0 4.7 1.7 4.7 4.4"/></svg></div><h3>Toute la famille</h3><p>Adultes, enfants, ados, femmes enceintes ou allaitantes : des repères pour chacun.</p></div>
+      <div class="reason"><div class="d"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5C7 17 3.5 13.8 3.5 10.2 3.5 7.8 5.3 6 7.6 6c1.6 0 2.9.8 3.7 2 .8-1.2 2.1-2 3.7-2 2.3 0 4.1 1.8 4.1 4.2 0 3.6-3.5 6.8-8.5 10.3Z"/></svg></div><h3>{{ home.raisons.items[0].title }}</h3><p>{{ home.raisons.items[0].text }}</p></div>
+      <div class="reason"><div class="d"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.8" y="3.8" width="16.4" height="16.4" rx="4.5"/><path d="M12 8.2v7.6M8.2 12h7.6"/></svg></div><h3>{{ home.raisons.items[1].title }}</h3><p>{{ home.raisons.items[1].text }}</p></div>
+      <div class="reason"><div class="d"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 11.5h11l-1.2 7.5h-8.6z"/><path d="M7.2 11.5a4.8 4.8 0 0 1 9.6 0"/><path d="M12 4.2v2.3"/></svg></div><h3>{{ home.raisons.items[2].title }}</h3><p>{{ home.raisons.items[2].text }}</p></div>
+      <div class="reason"><div class="d"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13.8A7.5 7.5 0 1 1 10.2 4 6 6 0 0 0 20 13.8Z"/></svg></div><h3>{{ home.raisons.items[3].title }}</h3><p>{{ home.raisons.items[3].text }}</p></div>
+      <div class="reason"><div class="d"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5v-7.5"/><path d="M12 13c-3 0-5-2-5-5 3 0 5 2 5 5Z"/><path d="M12 11.5c0-2.6 2-4.5 4.6-4.5 0 2.6-2 4.5-4.6 4.5Z"/></svg></div><h3>{{ home.raisons.items[4].title }}</h3><p>{{ home.raisons.items[4].text }}</p></div>
+      <div class="reason"><div class="d"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.3" cy="8.8" r="2.5"/><circle cx="15.7" cy="8.8" r="2.5"/><path d="M3.6 19c0-2.7 2.1-4.4 4.7-4.4 1.2 0 2.3.4 3.1 1"/><path d="M12.6 15.6c.8-.6 1.9-1 3.1-1 2.6 0 4.7 1.7 4.7 4.4"/></svg></div><h3>{{ home.raisons.items[5].title }}</h3><p>{{ home.raisons.items[5].text }}</p></div>
     </div>
   </div>
 </section>
@@ -95,16 +94,13 @@ jsonld: true
   <div class="wrap">
     <div class="reveal"><div class="ent-visual"><img src="assets/img/entreprise-photo.jpg" alt="Mélodie Noël anime un atelier nutrition en entreprise" loading="lazy"></div></div>
     <div class="reveal" style="transition-delay:.1s">
-      <p class="eyebrow">En entreprise</p>
-      <h2>La nutrition au service du bien-être au travail</h2>
-      <p class="ent-water">Rééquilibrer l'assiette et l'esprit pour plus d'épanouissement et d'efficacité au travail.</p>
+      <p class="eyebrow">{{ home.entreprise.eyebrow }}</p>
+      <h2>{{ home.entreprise.title }}</h2>
+      <p class="ent-water">{{ home.entreprise.intro }}</p>
       <ol class="steps">
-        <li>Ateliers &amp; conférences nutrition, en petits groupes</li>
-        <li>Accompagnement individuel des salariés (présentiel ou visio)</li>
-        <li>Programmes bien-être &amp; QVT sur mesure</li>
-        <li>Une intervenante diplômée, à l'écoute et sans jugement</li>
-      </ol>
-      <a class="btn btn-soleil" href="entreprise.html">En savoir plus</a>
+{% for pt in home.entreprise.points %}        <li>{{ pt }}</li>
+{% endfor %}      </ol>
+      <a class="btn btn-soleil" href="entreprise.html">{{ home.entreprise.ctaLabel }}</a>
     </div>
   </div>
 </section>
@@ -126,14 +122,13 @@ jsonld: true
   <div class="wrap">
     <div class="reveal-l"><div class="cab"><img src="assets/img/cabinet.jpg" alt="Le cabinet de Mélodie Noël à Maisons-Alfort"></div></div>
     <div class="reveal-r" style="transition-delay:.12s">
-      <p class="eyebrow">Premier rendez-vous</p>
-      <h2>On commence par un petit déclic ?</h2>
-      <p style="color:var(--ink);max-width:32em;margin:16px 0 32px;line-height:1.7">Un premier échange pour faire connaissance, comprendre vos objectifs, et voir ensemble — en douceur — comment avancer. Sans jugement, à votre rythme.</p>
-      <a class="btn btn-dark" href="https://www.doctolib.fr/dieteticien/maisons-alfort/melodie-noel" target="_blank" rel="noopener">Prendre rendez-vous</a>
-      <p class="cta-meta">Maisons-Alfort · Métro 8 (Les Juilliottes) · au cabinet &amp; en visio<br><a href="contact.html">Voir toutes les infos pratiques →</a></p>
+      <p class="eyebrow">{{ home.cta.eyebrow }}</p>
+      <h2>{{ home.cta.title }}</h2>
+      <p style="color:var(--ink);max-width:32em;margin:16px 0 32px;line-height:1.7">{{ home.cta.text }}</p>
+      <a class="btn btn-dark" href="https://www.doctolib.fr/dieteticien/maisons-alfort/melodie-noel" target="_blank" rel="noopener">{{ home.cta.ctaLabel }}</a>
+      <p class="cta-meta">{{ home.cta.meta }}<br><a href="contact.html">Voir toutes les infos pratiques →</a></p>
     </div>
   </div>
 </section>
 
 </main>
-{% endraw %}

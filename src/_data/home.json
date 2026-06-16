@@ -1,0 +1,77 @@
+{
+  "hero": {
+    "eyebrow": "Diététique & hypnose · Maisons-Alfort",
+    "title": "Et si tout partait<br>d'un <span class=\"hand\">déclic</span>",
+    "subtitle": "Retrouvez énergie et fluidité en rééquilibrant votre <span class=\"kw\">assiette</span> et votre <span class=\"kw\">esprit</span>, sans prise de tête.",
+    "ctaLabel": "Découvrir l'approche"
+  },
+  "approche": {
+    "eyebrow": "Mon approche",
+    "title": "Deux outils, une même intention",
+    "intro": "Soigner ce que vous mangez ne suffit pas toujours : il faut aussi apaiser ce qui vous pousse à manger. C'est là que mes deux métiers se rejoignent.",
+    "slogan": "En route vers l'équilibre nutritionnel et émotionnel.",
+    "pills": [
+      {
+        "tag": "Le concret",
+        "title": "Diététique & nutrition",
+        "text": "Des repères clairs, fondés sur la science et adaptés à votre vie. Pas de régime triste : des astuces simples, tenables, sans interdits."
+      },
+      {
+        "tag": "Le déclic",
+        "title": "Hypnose",
+        "text": "Un travail tout en douceur sur les émotions, les automatismes et les compulsions, pour que le changement vienne de l'intérieur — à votre rythme."
+      }
+    ],
+    "line": "La différence entre tenir un régime… et changer pour de bon."
+  },
+  "raisons": {
+    "eyebrow": "Pourquoi venir me voir",
+    "title": "Vous pourriez me consulter pour…",
+    "intro": "Quel que soit votre point de départ, on construit ensemble une démarche qui vous ressemble.",
+    "items": [
+      {
+        "title": "Le poids & l'image de soi",
+        "text": "Perdre du poids durablement et se réconcilier avec son corps, sans obsession des chiffres."
+      },
+      {
+        "title": "Une pathologie",
+        "text": "Diabète, cholestérol, stéatose, intolérances : mieux vivre au quotidien par l'alimentation."
+      },
+      {
+        "title": "Les compulsions sucrées",
+        "text": "Comprendre, apprivoiser puis transformer les pulsions — sans frustration ni culpabilité."
+      },
+      {
+        "title": "Sommeil & nourriture",
+        "text": "Démêler fatigue, grignotage et émotions pour retrouver de l'énergie."
+      },
+      {
+        "title": "Un cap émotionnel",
+        "text": "Quand l'alimentation porte un poids émotionnel, on travaille la cause, pas juste le symptôme."
+      },
+      {
+        "title": "Toute la famille",
+        "text": "Adultes, enfants, ados, femmes enceintes ou allaitantes : des repères pour chacun."
+      }
+    ]
+  },
+  "entreprise": {
+    "eyebrow": "En entreprise",
+    "title": "La nutrition au service du bien-être au travail",
+    "intro": "Rééquilibrer l'assiette et l'esprit pour plus d'épanouissement et d'efficacité au travail.",
+    "points": [
+      "Ateliers & conférences nutrition, en petits groupes",
+      "Accompagnement individuel des salariés (présentiel ou visio)",
+      "Programmes bien-être & QVT sur mesure",
+      "Une intervenante diplômée, à l'écoute et sans jugement"
+    ],
+    "ctaLabel": "En savoir plus"
+  },
+  "cta": {
+    "eyebrow": "Premier rendez-vous",
+    "title": "On commence par un petit déclic ?",
+    "text": "Un premier échange pour faire connaissance, comprendre vos objectifs, et voir ensemble — en douceur — comment avancer. Sans jugement, à votre rythme.",
+    "ctaLabel": "Prendre rendez-vous",
+    "meta": "Maisons-Alfort · Métro 8 (Les Juilliottes) · au cabinet & en visio"
+  }
+}
