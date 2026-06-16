@@ -1,44 +1,14 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>À propos — Mélodie Noël, Diététicienne-Nutritionniste & praticienne en hypnose</title>
-  <meta name="description" content="Ingénieure chimiste devenue diététicienne-nutritionniste puis praticienne en hypnose à Maisons-Alfort. Parcours, titres et approche de Mélodie Noël.">
-  <meta name="theme-color" content="#4E9D3F">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="À propos — Mélodie Noël">
-  <meta property="og:description" content="Diététique & hypnose à Maisons-Alfort : le parcours et l'approche de Mélodie Noël.">
-  <meta property="og:locale" content="fr_FR">
-  <link rel="icon" type="image/png" href="assets/img/logo-coeur.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-<a href="#main" class="skip-link">Aller au contenu principal</a>
-
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="index.html" aria-label="Mélodie Noël, accueil">
-      <img class="ic" src="assets/img/logo-coeur.png" alt="">
-      <span class="stack"><img class="nm" src="assets/img/logo-nom.png" alt="Mélodie Noël"><span class="tg">DIÉTÉTIQUE <span class="amp">&amp;</span> HYPNOSE</span></span>
-    </a>
-    <nav aria-label="Navigation principale">
-      <ul class="menu" id="menu">
-        <li><a href="accompagnements.html">Accompagnements</a></li>
-        <li><a href="entreprise.html">Entreprise</a></li>
-        <li><a href="apropos.html" aria-current="page">À propos</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li class="menu-cta"><a class="cta" href="contact.html">Prendre rendez-vous</a></li>
-      </ul>
-    </nav>
-    <a class="cta" href="contact.html">Prendre rendez-vous</a>
-    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
-  </div>
-</header>
-
+---
+layout: base.njk
+permalink: "/apropos.html"
+navId: "apropos"
+title: "À propos — Mélodie Noël, Diététicienne-Nutritionniste & praticienne en hypnose"
+description: "Ingénieure chimiste devenue diététicienne-nutritionniste puis praticienne en hypnose à Maisons-Alfort. Parcours, titres et approche de Mélodie Noël."
+themeColor: "#4E9D3F"
+ogTitle: "À propos — Mélodie Noël"
+ogDescription: "Diététique & hypnose à Maisons-Alfort : le parcours et l'approche de Mélodie Noël."
+---
+{% raw %}
 <main id="main">
 
   <!-- HERO -->
@@ -102,19 +72,4 @@
   </section>
 
 </main>
-
-<footer>
-  <div class="wrap">
-    <div class="foot">
-      <div><img class="nm" src="assets/img/logo-nom.png" alt="Mélodie Noël"><p class="slogan">En route vers l'équilibre nutritionnel et émotionnel.</p><p class="foot-roles">Diététicienne-Nutritionniste &amp; praticienne en hypnose à Maisons-Alfort.</p></div>
-      <nav aria-label="Pied de page"><h4>Navigation</h4><ul><li><a href="accompagnements.html">Accompagnements</a></li><li><a href="entreprise.html">Entreprise</a></li><li><a href="apropos.html">À propos</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
-      <div><h4>Informations légales</h4><ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="confidentialite.html">Politique de confidentialité</a></li><li><a href="accessibilite.html">Accessibilité</a></li></ul></div>
-    </div>
-    <div class="copy"><span>© <span id="yr"></span> Mélodie Noël — Tous droits réservés</span><span>22D rue Georges Gaumé, 94700 Maisons-Alfort</span></div>
-    <p class="credit">Créé avec <span class="hrt" role="img" aria-label="amour">♥</span> par Adeline, <a href="https://nao-insight.fr/" target="_blank" rel="noopener">NAO INSIGHT</a></p>
-  </div>
-</footer>
-
-<script src="assets/js/main.js" defer></script>
-</body>
-</html>
+{% endraw %}
