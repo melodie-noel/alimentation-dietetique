@@ -36,3 +36,74 @@ logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 
 # Add site links in Decap CMS (optional)
 site_url: https://preprod--melodie-noel.netlify.app
+
+locale: fr
+media_folder: "src/assets/img"
+public_folder: "/assets/img"
+
+collections:
+  - name: pages
+    label: Pages du site
+    files:
+      - name: home
+        label: Accueil
+        file: src/_data/home.json
+        format: json
+        fields:
+          - label: "Hero (haut de page)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string, hint: "Vous pouvez garder <br> et <span class=\"hand\">…</span> pour le style manuscrit." }
+              - { label: "Sous-titre", name: subtitle, widget: text, hint: "Conservez les <span class=\"kw\">…</span> pour les mots en couleur." }
+              - { label: "Libellé du bouton", name: ctaLabel, widget: string }
+          - label: "Section « Mon approche »"
+            name: approche
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Introduction", name: intro, widget: text }
+              - { label: "Slogan", name: slogan, widget: string }
+              - label: "Les deux piliers"
+                name: pills
+                widget: list
+                max: 2
+                fields:
+                  - { label: "Étiquette", name: tag, widget: string }
+                  - { label: "Titre", name: title, widget: string }
+                  - { label: "Texte", name: text, widget: text }
+              - { label: "Phrase de fin", name: line, widget: string }
+          - label: "Section « Pourquoi venir me voir »"
+            name: raisons
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Introduction", name: intro, widget: text }
+              - label: "Motifs de consultation (icône fixe)"
+                name: items
+                widget: list
+                max: 6
+                fields:
+                  - { label: "Titre", name: title, widget: string }
+                  - { label: "Texte", name: text, widget: text }
+          - label: "Section « Comment on travaille ensemble »"
+            name: accompagnements
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - label: "Cartes (ajout / suppression / réordonnancement libres)"
+                name: cards
+                widget: list
+                fields:
+                  - { label: "Titre", name: title, widget: string }
+                  - { label: "Texte", name: text, widget: text }
+              - { label: "Libellé du bouton", name: ctaLabel, widget: string }
+          - label: "Section « En entreprise »"
+            name: entreprise
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
