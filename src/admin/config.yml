@@ -8,7 +8,7 @@
 backend:
   name: git-gateway
   repo: aderazey/melodie-noel
-  branch: main
+  branch: preprod
   auth_type: pkce
   base_url: https://auth.decapbridge.com
   auth_endpoint: /sites/195a58bc-fe46-462c-903f-3be9e7eb38fe/pkce
