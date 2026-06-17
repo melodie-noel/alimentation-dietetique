@@ -79,13 +79,11 @@ jsonld: true
 <!-- ACCOMPAGNEMENTS -->
 <section class="pad acid" id="accompagnements">
   <div class="wrap">
-    <div class="sec-head reveal"><p class="eyebrow">Accompagnements</p><h2>Comment on travaille ensemble</h2></div>
+    <div class="sec-head reveal"><p class="eyebrow">{{ home.accompagnements.eyebrow }}</p><h2>{{ home.accompagnements.title }}</h2></div>
     <div class="cards">
-      <article class="card reveal"><span class="badge">1</span><h3>Diététique &amp; hypnose</h3><p>L'accompagnement signature : un suivi nutritionnel concret, soutenu par l'hypnose pour lever ce qui bloque. Idéal pour la perte de poids et la relation à l'alimentation.</p></article>
-      <article class="card reveal" style="transition-delay:.07s"><span class="badge">2</span><h3>Diététique thérapeutique</h3><p>Un accompagnement adapté à votre pathologie (diabète, cholestérol, stéatose, troubles digestifs…), en lien avec votre parcours de soin.</p></article>
-      <article class="card reveal" style="transition-delay:.14s"><span class="badge">3</span><h3>Ateliers en petits groupes</h3><p>Des ateliers conviviaux pour apprendre en pratiquant — par exemple « alimentation &amp; grossesse ». Pédagogie, plaisir et astuces à emporter.</p></article>
-    </div>
-    <div style="margin-top:30px" class="reveal"><a class="btn btn-out" href="accompagnements.html">En savoir plus</a></div>
+{% for card in home.accompagnements.cards %}      <article class="card reveal"{% if not loop.first %} style="transition-delay:calc({{ loop.index0 }} * .07s)"{% endif %}><span class="badge">{{ loop.index }}</span><h3>{{ card.title }}</h3><p>{{ card.text }}</p></article>
+{% endfor %}    </div>
+    <div style="margin-top:30px" class="reveal"><a class="btn btn-out" href="accompagnements.html">{{ home.accompagnements.ctaLabel }}</a></div>
   </div>
 </section>
 
