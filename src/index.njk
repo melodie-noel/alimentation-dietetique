@@ -137,7 +137,8 @@ jsonld: true
     <div class="reveal-r" style="transition-delay:.12s">
       <p class="eyebrow">{{ home.cta.eyebrow }}</p>
       <h2>{{ home.cta.title }}</h2>
-      <p style="color:var(--ink);max-width:32em;margin:16px 0 32px;line-height:1.7">{{ home.cta.text }}</p>
+      <p style="color:var(--ink);max-width:32em;margin:16px 0 14px;line-height:1.7">{{ home.cta.text }}</p>
+      {% if home.cta.elan %}<p class="cta-elan">{{ home.cta.elan }}</p>{% endif %}
       <a class="btn btn-dark" href="https://www.doctolib.fr/dieteticien/maisons-alfort/melodie-noel" target="_blank" rel="noopener">{{ home.cta.ctaLabel }}</a>
       <p class="cta-meta">{{ home.cta.meta }}<br><a href="contact.html">Voir toutes les infos pratiques →</a></p>
     </div>

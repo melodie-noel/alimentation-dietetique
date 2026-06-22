@@ -328,3 +328,4 @@ footer{background:#20211b;color:#bcd3bf;padding:56px 0 26px}
 .pill .approche-note{margin:13px 0 0;padding-top:12px;border-top:1px solid var(--line);font-family:'Caveat',cursive;font-weight:600;font-size:1.32rem;line-height:1.25;color:var(--terra)}
 .t-ink{border-color:#cfc7ba;color:#34312A}
 .feat-card .ico img,.approach-card .ico img{width:26px;height:26px;display:block}
+.cta-elan{font-family:'Caveat',cursive;font-weight:600;font-size:1.65rem;line-height:1.2;color:var(--vert);margin:0 0 30px}

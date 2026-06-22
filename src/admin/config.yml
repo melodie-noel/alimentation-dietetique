@@ -111,6 +111,7 @@ collections:
               - { label: "Surtitre", name: eyebrow, widget: string }
               - { label: "Titre", name: title, widget: string }
               - { label: "Texte", name: text, widget: text }
+              - { label: "Phrase d'élan", name: elan, widget: string, required: false }
               - { label: "Libellé du bouton", name: ctaLabel, widget: string }
               - { label: "Infos pratiques", name: meta, widget: string }
       - name: entreprise
