@@ -7,8 +7,8 @@
   },
   "approche": {
     "eyebrow": "Mon approche",
-    "title": "Deux outils, une même intention",
-    "intro": "Soigner ce que vous mangez ne suffit pas toujours : il faut aussi apaiser ce qui vous pousse à manger. C'est là que mes deux métiers se rejoignent.",
+    "title": "Deux outils, une même intention : atteindre l'équilibre",
+    "intro": "Parce que parfois, soigner ce que vous mangez ne suffit pas toujours : il faut aussi observer ce qui influence votre alimentation. C'est là que mes deux métiers se rejoignent.",
     "slogan": "En route vers l'équilibre nutritionnel et émotionnel.",
     "pills": [
       {
@@ -19,9 +19,10 @@
       {
         "tag": "Le déclic",
         "title": "Hypnose",
-        "text": "Un travail tout en douceur sur les émotions, les automatismes et les compulsions, pour que le changement vienne de l'intérieur — à votre rythme."
+        "text": "Un travail en douceur sur les émotions, les perceptions et les automatismes, pour que le changement vienne de l'intérieur, à votre rythme."
       }
     ],
+    "note": "Pas envie d'hypnose ? Aucun souci, restons sur la diététique.",
     "line": "La différence entre tenir un régime… et changer pour de bon."
   },
   "raisons": {

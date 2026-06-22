@@ -1,0 +1,177 @@
+{
+  "hero": {
+    "eyebrow": "En entreprise · Sur site ou en visio",
+    "title": "Bien manger, <span class=\"hand\">mieux travailler</span>.",
+    "lead": "Vous souhaitez instaurer cette culture dans votre entreprise ? Des interventions originales et impactantes, alliant diététique et hypnose, pour des équipes plus énergiques, plus sereines et plus performantes."
+  },
+  "promesses": [
+    {
+      "icon": "/assets/img/icons/ico-etoile.svg",
+      "text": "Des interventions originales et impactantes, alliant diététique et hypnose"
+    },
+    {
+      "icon": "/assets/img/icons/ico-ampoule.svg",
+      "text": "Des moments inspirants pour éveiller et sensibiliser vos équipes"
+    },
+    {
+      "icon": "/assets/img/icons/ico-doc.svg",
+      "text": "Des outils concrets et directement applicables au quotidien"
+    },
+    {
+      "icon": "/assets/img/icons/ico-coeur.svg",
+      "text": "Un impact durable sur l'énergie, la santé et le bien-être de vos collaborateurs"
+    }
+  ],
+  "benefices": {
+    "eyebrow": "Les bénéfices",
+    "title": "Pourquoi me faire intervenir ?",
+    "items": [
+      "Répondre à vos obligations QVT (Qualité de Vie au Travail)",
+      "Réduire l'absentéisme et ses coûts associés",
+      "Protéger et renforcer la santé de vos collaborateurs",
+      "Optimiser leurs performances et leur concentration",
+      "Développer de meilleures habitudes alimentaires au quotidien",
+      "Renforcer la cohésion d'équipe autour d'un projet commun"
+    ]
+  },
+  "maux": {
+    "eyebrow": "L'enjeu",
+    "title": "Des maux qui pèsent sur vos équipes",
+    "lead": "Ces difficultés impactent directement vos collaborateurs — et votre performance. Mieux manger et mieux gérer ses émotions, c'est l'investissement le plus efficace que vous puissiez faire pour vos équipes.",
+    "bubbles": [
+      {
+        "texte": "Irritabilité",
+        "couleur": "vert"
+      },
+      {
+        "texte": "Stress",
+        "couleur": "corail"
+      },
+      {
+        "texte": "Fatigue chronique",
+        "couleur": "gold"
+      },
+      {
+        "texte": "Burn-out",
+        "couleur": "terra"
+      },
+      {
+        "texte": "Troubles du sommeil",
+        "couleur": "clem"
+      },
+      {
+        "texte": "Douleurs articulaires",
+        "couleur": "ink"
+      },
+      {
+        "texte": "Baisse de moral",
+        "couleur": "vert"
+      },
+      {
+        "texte": "Estime de soi fragilisée",
+        "couleur": "terra"
+      }
+    ]
+  },
+  "formats": {
+    "eyebrow": "Sur site ou en visio",
+    "title": "Trois formats d'intervention",
+    "cards": [
+      {
+        "icon": "/assets/img/icons/ico-atelier.svg",
+        "title": "Atelier",
+        "text": "Un format interactif et participatif : on expérimente, on échange, on repart avec des outils concrets."
+      },
+      {
+        "icon": "/assets/img/icons/ico-conference.svg",
+        "title": "Conférence",
+        "text": "Un moment inspirant pour sensibiliser un large public et donner envie de changer, en douceur."
+      },
+      {
+        "icon": "/assets/img/icons/ico-consultation.svg",
+        "title": "Consultation",
+        "text": "Un suivi individuel, sur site, pour un accompagnement personnalisé de vos collaborateurs."
+      }
+    ]
+  },
+  "references": {
+    "eyebrow": "Ils ont franchi le pas",
+    "title": "Quelques exemples d'interventions",
+    "refs": [
+      {
+        "nom": "BPI France",
+        "lignes": [
+          "Conférence « Comment optimiser votre dynamisme et votre concentration grâce à l'alimentation »",
+          "Conférence « Comment manger léger sans avoir faim ni perdre d'énergie ? »",
+          "Conférence « Je ne pense qu'à manger, que faire ? »",
+          "Présence sur stand — journée QVT"
+        ]
+      },
+      {
+        "nom": "Kantar",
+        "lignes": [
+          "Conférence « Comment bien manger au travail pour rester concentré ? »"
+        ]
+      },
+      {
+        "nom": "Maryse Bastié",
+        "lignes": [
+          "Ateliers interactifs séniors (biannuels) — prévention du diabète et de la dénutrition"
+        ]
+      },
+      {
+        "nom": "Ordre des Sages-Femmes",
+        "lignes": [
+          "Conférence « Comment bien manger avec des horaires décalés ? »"
+        ]
+      },
+      {
+        "nom": "ANSYS",
+        "lignes": [
+          "Programme « Mars, le mois du renouveau » — 3 ateliers interactifs :",
+          "1 · Équilibre nutritionnel et performance durable",
+          "2 · Stress, fatigue et régulation émotionnelle",
+          "3 · Télétravail et compulsions alimentaires"
+        ]
+      }
+    ]
+  },
+  "themes": {
+    "eyebrow": "Idées de sujet",
+    "title": "Et si c'était votre tour ?",
+    "lead": "Quelques thèmes possibles — et bien plus encore. Chaque intervention est <strong>100 % personnalisable</strong> selon vos besoins.",
+    "items": [
+      {
+        "texte": "Équilibre nutritionnel et performance durable",
+        "couleur": "vert"
+      },
+      {
+        "texte": "Stress, fatigue et régulation émotionnelle",
+        "couleur": "corail"
+      },
+      {
+        "texte": "Retrouver une relation harmonieuse à son corps",
+        "couleur": "gold"
+      },
+      {
+        "texte": "Télétravail et compulsions alimentaires",
+        "couleur": "clem"
+      },
+      {
+        "texte": "Sommeil, récupération et alimentation",
+        "couleur": "terra"
+      }
+    ]
+  },
+  "encart": {
+    "eyebrow": "Et pourquoi pas en tête à tête ?",
+    "title": "Offrez à vos collaborateurs une séance individuelle sur site",
+    "text": "Une heure, une personne, un vrai suivi. Chaque séance — diététique &amp; hypnose — est construite autour de la situation personnelle du collaborateur, en toute confidentialité et dans le respect du secret professionnel."
+  },
+  "cta": {
+    "title": "Discutons-en",
+    "text": "Le devis est établi après un premier entretien en visio, <strong>gratuit et sans engagement</strong>, pour cerner vos besoins et construire l'intervention qui vous ressemble.",
+    "btnContact": "Me contacter",
+    "btnPlaquette": "Télécharger la plaquette"
+  }
+}

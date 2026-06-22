@@ -8,23 +8,22 @@ themeColor: "#4E9D3F"
 ogTitle: "En entreprise — Mélodie Noël, Diététique & Hypnose"
 ogDescription: "Bien manger, mieux travailler. Des interventions originales alliant diététique et hypnose pour vos équipes."
 ---
-{% raw %}
 <main id="main">
 
   <!-- HERO -->
   <section class="page-hero page-hero--green has-citrus">
     <img class="citrus citrus--hero" src="assets/img/orange-photo.png" alt="" aria-hidden="true">
     <div class="wrap">
-      <p class="eyebrow">En entreprise · Sur site ou en visio</p>
-      <h1>Bien manger, <span class="hand">mieux travailler</span>.</h1>
-      <p class="lead">Vous souhaitez instaurer cette culture dans votre entreprise ? Des interventions originales et impactantes, alliant diététique et hypnose, pour des équipes plus énergiques, plus sereines et plus performantes.</p>
+      <p class="eyebrow">{{ entreprise.hero.eyebrow }}</p>
+      <h1>{{ entreprise.hero.title | safe }}</h1>
+      <p class="lead">{{ entreprise.hero.lead }}</p>
     </div>
   </section>
 
   <!-- PROMESSES -->
   <section class="sec">
     <div class="wrap">
-      <div class="feat-cards cascade"><div class="feat-card"><span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3l1.7 5.1 5.1 1.7-5.1 1.7L12 16.6 10.3 11.5 5.2 9.8l5.1-1.7z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></svg></span><p>Des interventions originales et impactantes, alliant diététique et hypnose</p></div><div class="feat-card"><span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9.5 18h5M10.5 21h3M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .9 1.6l.1.6h5l.1-.6c.1-.6.4-1.2.9-1.6A6 6 0 0 0 12 3Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></svg></span><p>Des moments inspirants pour éveiller et sensibiliser vos équipes</p></div><div class="feat-card"><span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="5" y="4" width="14" height="17" rx="2" stroke="currentColor" stroke-width="1.9"/><path d="M9 9h6M9 12.5h6M9 16h4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></span><p>Des outils concrets et directement applicables au quotidien</p></div><div class="feat-card"><span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 20s-7-4.3-7-9.2A3.8 3.8 0 0 1 12 7.2 3.8 3.8 0 0 1 19 10.8C19 15.7 12 20 12 20Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></svg></span><p>Un impact durable sur l'énergie, la santé et le bien-être de vos collaborateurs</p></div></div>
+      <div class="feat-cards cascade">{% for p in entreprise.promesses %}<div class="feat-card"><span class="ico" aria-hidden="true"><img src="{{ p.icon }}" alt="" width="26" height="26"></span><p>{{ p.text }}</p></div>{% endfor %}</div>
     </div>
   </section>
 
@@ -32,17 +31,10 @@ ogDescription: "Bien manger, mieux travailler. Des interventions originales alli
   <section class="sec alt">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">Les bénéfices</p>
-        <h2>Pourquoi me faire intervenir ?</h2>
+        <p class="eyebrow">{{ entreprise.benefices.eyebrow }}</p>
+        <h2>{{ entreprise.benefices.title }}</h2>
       </div>
-      <ul class="feature-list grid-2">
-        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#4E9D3F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Répondre à vos obligations QVT (Qualité de Vie au Travail)</li>
-        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#4E9D3F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Réduire l'absentéisme et ses coûts associés</li>
-        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#4E9D3F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Protéger et renforcer la santé de vos collaborateurs</li>
-        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#4E9D3F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Optimiser leurs performances et leur concentration</li>
-        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#4E9D3F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Développer de meilleures habitudes alimentaires au quotidien</li>
-        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#4E9D3F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Renforcer la cohésion d'équipe autour d'un projet commun</li>
-      </ul>
+      <ul class="feature-list grid-2">{% for it in entreprise.benefices.items %}<li><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#4E9D3F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> {{ it }}</li>{% endfor %}</ul>
     </div>
   </section>
 
@@ -50,11 +42,13 @@ ogDescription: "Bien manger, mieux travailler. Des interventions originales alli
   <section class="sec">
     <div class="wrap" style="text-align:center">
       <div class="sec-head" style="margin:0 auto 14px">
-        <p class="eyebrow">L'enjeu</p>
-        <h2>Des maux qui pèsent sur vos équipes</h2>
+        <p class="eyebrow">{{ entreprise.maux.eyebrow }}</p>
+        <h2>{{ entreprise.maux.title }}</h2>
       </div>
-      <p class="lead" style="max-width:48em;margin:0 auto 36px">Ces difficultés impactent directement vos collaborateurs — et votre performance. Mieux manger et mieux gérer ses émotions, c'est l'investissement le plus efficace que vous puissiez faire pour vos équipes.</p>
-      <div class="maux-bubbles" aria-label="Maux concernés"><span class="bubble b-vert sm" style="animation-delay:0s">Irritabilité</span><span class="bubble b-corail big" style="animation-delay:.5s">Stress</span><span class="bubble b-gold mid" style="animation-delay:.2s">Fatigue chronique</span><span class="bubble b-terra big" style="animation-delay:.8s">Burn-out</span><span class="bubble b-clem mid" style="animation-delay:.3s">Troubles du sommeil</span><span class="bubble b-ink sm" style="animation-delay:.6s">Douleurs articulaires</span><span class="bubble b-vert mid" style="animation-delay:.1s">Baisse de moral</span><span class="bubble b-terra sm" style="animation-delay:.4s">Estime de soi fragilisée</span></div>
+      <p class="lead" style="max-width:48em;margin:0 auto 36px">{{ entreprise.maux.lead }}</p>
+      {% set sizes = ["sm","big","mid","big","mid","sm","mid","sm"] %}
+      {% set delays = ["0s",".5s",".2s",".8s",".3s",".6s",".1s",".4s"] %}
+      <div class="maux-bubbles" aria-label="Maux concernés">{% for b in entreprise.maux.bubbles %}<span class="bubble b-{{ b.couleur }} {{ sizes[loop.index0 % 8] }}" style="animation-delay:{{ delays[loop.index0 % 8] }}">{{ b.texte }}</span>{% endfor %}</div>
     </div>
   </section>
 
@@ -62,26 +56,10 @@ ogDescription: "Bien manger, mieux travailler. Des interventions originales alli
   <section class="sec alt">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">Sur site ou en visio</p>
-        <h2>Trois formats d'intervention</h2>
+        <p class="eyebrow">{{ entreprise.formats.eyebrow }}</p>
+        <h2>{{ entreprise.formats.title }}</h2>
       </div>
-      <div class="approach-grid">
-        <article class="approach-card">
-          <span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 19V6a2 2 0 0 1 2-2h9l5 4v11a0 0 0 0 1 0 0H4Z" stroke="#4E9D3F" stroke-width="2" stroke-linejoin="round"/><path d="M8 13h8M8 16h5" stroke="#4E9D3F" stroke-width="2" stroke-linecap="round"/></svg></span>
-          <h3>Atelier</h3>
-          <p>Un format interactif et participatif : on expérimente, on échange, on repart avec des outils concrets.</p>
-        </article>
-        <article class="approach-card">
-          <span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 4h10v8a5 5 0 0 1-10 0V4Z" stroke="#4E9D3F" stroke-width="2" stroke-linejoin="round"/><path d="M9 20h6M12 17v3" stroke="#4E9D3F" stroke-width="2" stroke-linecap="round"/></svg></span>
-          <h3>Conférence</h3>
-          <p>Un moment inspirant pour sensibiliser un large public et donner envie de changer, en douceur.</p>
-        </article>
-        <article class="approach-card">
-          <span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="#4E9D3F" stroke-width="2"/><path d="M5.5 19a6.5 6.5 0 0 1 13 0" stroke="#4E9D3F" stroke-width="2" stroke-linecap="round"/></svg></span>
-          <h3>Consultation</h3>
-          <p>Un suivi individuel, sur site, pour un accompagnement personnalisé de vos collaborateurs.</p>
-        </article>
-      </div>
+      <div class="approach-grid">{% for c in entreprise.formats.cards %}<article class="approach-card"><span class="ico" aria-hidden="true"><img src="{{ c.icon }}" alt="" width="26" height="26"></span><h3>{{ c.title }}</h3><p>{{ c.text }}</p></article>{% endfor %}</div>
     </div>
   </section>
 
@@ -89,41 +67,10 @@ ogDescription: "Bien manger, mieux travailler. Des interventions originales alli
   <section class="sec">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">Ils ont franchi le pas</p>
-        <h2>Quelques exemples d'interventions</h2>
+        <p class="eyebrow">{{ entreprise.references.eyebrow }}</p>
+        <h2>{{ entreprise.references.title }}</h2>
       </div>
-      <div class="refs">
-        <div class="ref">
-          <h3>BPI France</h3>
-          <ul>
-            <li>Conférence « Comment optimiser votre dynamisme et votre concentration grâce à l'alimentation »</li>
-            <li>Conférence « Comment manger léger sans avoir faim ni perdre d'énergie ? »</li>
-            <li>Conférence « Je ne pense qu'à manger, que faire ? »</li>
-            <li>Présence sur stand — journée QVT</li>
-          </ul>
-        </div>
-        <div class="ref">
-          <h3>Kantar</h3>
-          <ul><li>Conférence « Comment bien manger au travail pour rester concentré ? »</li></ul>
-        </div>
-        <div class="ref">
-          <h3>Maryse Bastié</h3>
-          <ul><li>Ateliers interactifs séniors (biannuels) — prévention du diabète et de la dénutrition</li></ul>
-        </div>
-        <div class="ref">
-          <h3>Ordre des Sages-Femmes</h3>
-          <ul><li>Conférence « Comment bien manger avec des horaires décalés ? »</li></ul>
-        </div>
-        <div class="ref">
-          <h3>ANSYS</h3>
-          <ul>
-            <li>Programme « Mars, le mois du renouveau » — 3 ateliers interactifs :</li>
-            <li>1 · Équilibre nutritionnel et performance durable</li>
-            <li>2 · Stress, fatigue et régulation émotionnelle</li>
-            <li>3 · Télétravail et compulsions alimentaires</li>
-          </ul>
-        </div>
-      </div>
+      <div class="refs">{% for r in entreprise.references.refs %}<div class="ref"><h3>{{ r.nom }}</h3><ul>{% for l in r.lignes %}<li>{{ l }}</li>{% endfor %}</ul></div>{% endfor %}</div>
     </div>
   </section>
 
@@ -131,36 +78,35 @@ ogDescription: "Bien manger, mieux travailler. Des interventions originales alli
   <section class="sec acid">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">Idées de sujet</p>
-        <h2>Et si c'était votre tour ?</h2>
-        <p class="lead">Quelques thèmes possibles — et bien plus encore. Chaque intervention est <strong>100 % personnalisable</strong> selon vos besoins.</p>
+        <p class="eyebrow">{{ entreprise.themes.eyebrow }}</p>
+        <h2>{{ entreprise.themes.title }}</h2>
+        <p class="lead">{{ entreprise.themes.lead | safe }}</p>
       </div>
-      <div class="topics cascade" aria-label="Idées de sujet"><span class="topic t-vert"><span class="dot" aria-hidden="true"></span>Équilibre nutritionnel et performance durable</span><span class="topic t-corail"><span class="dot" aria-hidden="true"></span>Stress, fatigue et régulation émotionnelle</span><span class="topic t-gold"><span class="dot" aria-hidden="true"></span>Retrouver une relation harmonieuse à son corps</span><span class="topic t-clem"><span class="dot" aria-hidden="true"></span>Télétravail et compulsions alimentaires</span><span class="topic t-terra"><span class="dot" aria-hidden="true"></span>Sommeil, récupération et alimentation</span></div>
+      <div class="topics cascade" aria-label="Idées de sujet">{% for t in entreprise.themes.items %}<span class="topic t-{{ t.couleur }}"><span class="dot" aria-hidden="true"></span>{{ t.texte }}</span>{% endfor %}</div>
     </div>
   </section>
 
-  <!-- SEANCES INDIVIDUELLES -->
+  <!-- SEANCE INDIVIDUELLE -->
   <section class="sec">
     <div class="wrap">
       <div class="note-box">
-        <p class="eyebrow">Et pourquoi pas en tête à tête ?</p>
-        <h3>Offrez à vos collaborateurs une séance individuelle sur site</h3>
-        <p>Une heure, une personne, un vrai suivi. Chaque séance — diététique &amp; hypnose — est construite autour de la situation personnelle du collaborateur, en toute confidentialité et dans le respect du secret professionnel.</p>
+        <p class="eyebrow">{{ entreprise.encart.eyebrow }}</p>
+        <h3>{{ entreprise.encart.title }}</h3>
+        <p>{{ entreprise.encart.text | safe }}</p>
       </div>
     </div>
   </section>
 
-  <!-- CTA / TARIFS -->
+  <!-- CTA -->
   <section class="cta-band">
     <div class="wrap">
-      <h2>Discutons-en</h2>
-      <p>Le devis est établi après un premier entretien en visio, <strong>gratuit et sans engagement</strong>, pour cerner vos besoins et construire l'intervention qui vous ressemble.</p>
+      <h2>{{ entreprise.cta.title }}</h2>
+      <p>{{ entreprise.cta.text | safe }}</p>
       <div class="tarifs" style="justify-content:center">
-        <a class="btn btn-dark" href="contact.html#formulaire">Me contacter</a>
-        <a class="btn btn-out" href="assets/flyers/flyer-entreprise.pdf" target="_blank" rel="noopener" aria-label="Télécharger la plaquette entreprise (PDF)">Télécharger la plaquette</a>
+        <a class="btn btn-dark" href="contact.html#formulaire">{{ entreprise.cta.btnContact }}</a>
+        <a class="btn btn-out" href="assets/flyers/flyer-entreprise.pdf" target="_blank" rel="noopener" aria-label="Télécharger la plaquette entreprise (PDF)">{{ entreprise.cta.btnPlaquette }}</a>
       </div>
     </div>
   </section>
 
 </main>
-{% endraw %}

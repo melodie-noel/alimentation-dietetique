@@ -67,6 +67,7 @@ collections:
                   - { label: "Titre", name: title, widget: string }
                   - { label: "Texte", name: text, widget: text }
               - { label: "Phrase de fin", name: line, widget: string }
+              - { label: "Phrase d'accroche hypnose (mise en avant)", name: note, widget: string, required: false }
           - label: "Section « Pourquoi venir me voir »"
             name: raisons
             widget: object
@@ -112,3 +113,114 @@ collections:
               - { label: "Texte", name: text, widget: text }
               - { label: "Libellé du bouton", name: ctaLabel, widget: string }
               - { label: "Infos pratiques", name: meta, widget: string }
+      - name: entreprise
+        label: Page Entreprise
+        file: src/_data/entreprise.json
+        format: json
+        fields:
+          - label: "Héro (haut de page)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string, hint: "Conservez <span class=\"hand\">…</span> pour le mot manuscrit." }
+              - { label: "Accroche", name: lead, widget: text }
+          - label: "Promesses (blocs avec icône)"
+            name: promesses
+            widget: list
+            fields:
+              - { label: "Icône", name: icon, widget: image, hint: "Icône carrée, SVG ou PNG à fond transparent, ~64×64 px, tracé simple (vert #4E9D3F de préférence)." }
+              - { label: "Texte", name: text, widget: string }
+          - label: "Section « Pourquoi me faire intervenir »"
+            name: benefices
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Bénéfices", name: items, widget: list, field: { label: "Bénéfice", name: item, widget: string } }
+          - label: "Section « Les maux »"
+            name: maux
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Introduction", name: lead, widget: text }
+              - label: "Bulles (ajout / suppression libres)"
+                name: bubbles
+                widget: list
+                fields:
+                  - { label: "Texte", name: texte, widget: string }
+                  - label: "Couleur"
+                    name: couleur
+                    widget: select
+                    default: "vert"
+                    options:
+                      - { label: "Vert", value: "vert" }
+                      - { label: "Corail", value: "corail" }
+                      - { label: "Doré", value: "gold" }
+                      - { label: "Terracotta", value: "terra" }
+                      - { label: "Clémentine", value: "clem" }
+                      - { label: "Anthracite", value: "ink" }
+          - label: "Section « Trois formats »"
+            name: formats
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - label: "Formats"
+                name: cards
+                widget: list
+                fields:
+                  - { label: "Icône", name: icon, widget: image, hint: "Icône carrée, SVG ou PNG à fond transparent, ~64×64 px, tracé simple (vert #4E9D3F de préférence)." }
+                  - { label: "Titre", name: title, widget: string }
+                  - { label: "Texte", name: text, widget: text }
+          - label: "Section « Références clients »"
+            name: references
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - label: "Clients"
+                name: refs
+                widget: list
+                fields:
+                  - { label: "Nom du client", name: nom, widget: string }
+                  - { label: "Interventions", name: lignes, widget: list, field: { label: "Ligne", name: ligne, widget: string } }
+          - label: "Section « Idées de sujet »"
+            name: themes
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Introduction", name: lead, widget: string, hint: "Le <strong>…</strong> met en gras." }
+              - label: "Thèmes (ajout / suppression libres)"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Texte", name: texte, widget: string }
+                  - label: "Couleur"
+                    name: couleur
+                    widget: select
+                    default: "vert"
+                    options:
+                      - { label: "Vert", value: "vert" }
+                      - { label: "Corail", value: "corail" }
+                      - { label: "Doré", value: "gold" }
+                      - { label: "Terracotta", value: "terra" }
+                      - { label: "Clémentine", value: "clem" }
+                      - { label: "Anthracite", value: "ink" }
+          - label: "Encart « séance individuelle »"
+            name: encart
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Texte", name: text, widget: text }
+          - label: "Bloc de contact (bas de page)"
+            name: cta
+            widget: object
+            fields:
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Texte", name: text, widget: text }
+              - { label: "Libellé bouton « contact »", name: btnContact, widget: string }
+              - { label: "Libellé bouton « plaquette »", name: btnPlaquette, widget: string }
