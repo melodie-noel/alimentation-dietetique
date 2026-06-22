@@ -143,7 +143,7 @@ section{position:relative}
 
 /* FOOTER */
 footer{background:#20211b;color:#bcd3bf;padding:56px 0 26px}
-.foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.12)}
+.foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.12);align-items:start}
 .foot .nm{filter:brightness(0) invert(1);opacity:.95;height:30px}
 .foot p{font-size:.9rem;max-width:26em;margin-top:14px}
 .foot h4{color:#fff;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
@@ -322,7 +322,7 @@ footer{background:#20211b;color:#bcd3bf;padding:56px 0 26px}
 .myths li::before{content:"\2715";position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--corail);font-style:normal;font-weight:800}
 /* Nouveau logo (SVG) */
 .brand-logo{height:120px;width:auto;display:block}
-.foot-logo{height:68px;width:auto;display:block}
+.foot-logo{height:52px;width:auto;display:block}
 @media(max-width:560px){.nav{height:92px}.brand-logo{height:64px}}
 /* Mon approche : note rassurante intégrée au bloc hypnose */
 .pill .approche-note{margin:13px 0 0;padding-top:12px;border-top:1px solid var(--line);font-family:'Caveat',cursive;font-weight:600;font-size:1.32rem;line-height:1.25;color:var(--terra)}

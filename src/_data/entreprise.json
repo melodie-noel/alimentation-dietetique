@@ -2,20 +2,20 @@
   "hero": {
     "eyebrow": "En entreprise · Sur site ou en visio",
     "title": "Bien manger, <span class=\"hand\">mieux travailler</span>.",
-    "lead": "Vous souhaitez instaurer cette culture dans votre entreprise ? Des interventions originales et impactantes, alliant diététique et hypnose, pour des équipes plus énergiques, plus sereines et plus performantes."
+    "lead": "Vous souhaitez instaurer cette culture dans votre entreprise, pour des équipes plus énergiques, plus sereines et plus performantes ?"
   },
   "promesses": [
     {
       "icon": "/assets/img/icons/ico-etoile.svg",
-      "text": "Des interventions originales et impactantes, alliant diététique et hypnose"
+      "text": "Des interventions originales et impactantes sur des sujets bien-être, alliant diététique et hypnose"
     },
     {
       "icon": "/assets/img/icons/ico-ampoule.svg",
-      "text": "Des moments inspirants pour éveiller et sensibiliser vos équipes"
+      "text": "Des interventions centrées sur la diététique, complétées par des outils d'hypnose pour explorer les mécanismes du changement."
     },
     {
       "icon": "/assets/img/icons/ico-doc.svg",
-      "text": "Des outils concrets et directement applicables au quotidien"
+      "text": "Une intervention qui donne envie d'agir, avec des conseils réalistes, accessibles et adaptés à la vraie vie."
     },
     {
       "icon": "/assets/img/icons/ico-coeur.svg",
@@ -114,7 +114,7 @@
         ]
       },
       {
-        "nom": "Maryse Bastié",
+        "nom": "ARPAVIE – Maryse Bastié",
         "lignes": [
           "Ateliers interactifs séniors (biannuels) — prévention du diabète et de la dénutrition"
         ]
