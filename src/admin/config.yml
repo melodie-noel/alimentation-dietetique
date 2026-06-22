@@ -225,3 +225,10 @@ collections:
               - { label: "Texte", name: text, widget: text }
               - { label: "Libellé bouton « contact »", name: btnContact, widget: string }
               - { label: "Libellé bouton « plaquette »", name: btnPlaquette, widget: string }
+              - label: "Plaquette à télécharger (PDF)"
+                name: flyer
+                widget: file
+                required: false
+                media_folder: "/src/assets/flyers"
+                public_folder: "/assets/flyers"
+                hint: "Téléversez ici la plaquette PDF à jour (couleurs actualisées) ; elle remplacera l'actuelle."

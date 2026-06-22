@@ -67,11 +67,11 @@ jsonld: true
     <div class="sec-head reveal"><p class="eyebrow">{{ home.raisons.eyebrow }}</p><h2>{{ home.raisons.title }}</h2><p>{{ home.raisons.intro }}</p></div>
     <div class="reasons cascade">
       <div class="reason"><div class="d"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15"/><path d="M7 19.2h10"/><path d="M4.5 7h15"/><path d="M4.5 7 2 12.2a2.5 2.5 0 0 0 5 0L4.5 7Z"/><path d="M19.5 7 17 12.2a2.5 2.5 0 0 0 5 0L19.5 7Z"/></svg></div><h3>{{ home.raisons.items[0].title }}</h3><p>{{ home.raisons.items[0].text }}</p></div>
-      <div class="reason"><div class="d"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="12" rx="3"/><path d="M6.5 11.5h2l1.4-3 2.6 6 1.4-3h3.6"/></svg></div><h3>{{ home.raisons.items[1].title }}</h3><p>{{ home.raisons.items[1].text }}</p></div>
+      <div class="reason"><div class="d"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 4.5h5v5h5v5h-5v5h-5v-5h-5v-5h5z"/></svg></div><h3>{{ home.raisons.items[1].title }}</h3><p>{{ home.raisons.items[1].text }}</p></div>
       <div class="reason"><div class="d"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="15" height="8.5" rx="2.2"/><path d="M21 11.2v2.1"/><path d="M10.6 9.6 8.4 12.8h2.4l-2 2.6"/></svg></div><h3>{{ home.raisons.items[2].title }}</h3><p>{{ home.raisons.items[2].text }}</p></div>
       <div class="reason"><div class="d"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5C7 17 3.5 13.8 3.5 10.2 3.5 7.8 5.3 6 7.6 6c1.6 0 2.9.8 3.7 2 .8-1.2 2.1-2 3.7-2 2.3 0 4.1 1.8 4.1 4.2 0 3.6-3.5 6.8-8.5 10.3Z"/></svg></div><h3>{{ home.raisons.items[3].title }}</h3><p>{{ home.raisons.items[3].text }}</p></div>
       <div class="reason"><div class="d"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5v-7.5"/><path d="M12 13c-3 0-5-2-5-5 3 0 5 2 5 5Z"/><path d="M12 11.5c0-2.6 2-4.5 4.6-4.5 0 2.6-2 4.5-4.6 4.5Z"/></svg></div><h3>{{ home.raisons.items[4].title }}</h3><p>{{ home.raisons.items[4].text }}</p></div>
-      <div class="reason"><div class="d"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.6 11A7.5 7.5 0 0 1 18 7.3"/><path d="M19.4 13A7.5 7.5 0 0 1 6 16.7"/><path d="M18.4 3.5v4h-4"/><path d="M5.6 20.5v-4h4"/></svg></div><h3>{{ home.raisons.items[5].title }}</h3><p>{{ home.raisons.items[5].text }}</p></div>
+      <div class="reason"><div class="d"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 11.5C6.6 8 9 6 12 6s5.4 2 5.4 5.5"/><path d="M6.4 11.5h11.2"/><path d="M7.6 11.5 9 20h6l1.4-8.5"/><path d="M12 6V4.4"/><circle cx="12" cy="3.6" r="1.1"/></svg></div><h3>{{ home.raisons.items[5].title }}</h3><p>{{ home.raisons.items[5].text }}</p></div>
     </div>
   </div>
 </section>
@@ -89,7 +89,7 @@ jsonld: true
   <div class="wrap">
     <div class="sec-head reveal"><p class="eyebrow">{{ home.accompagnements.eyebrow }}</p><h2>{{ home.accompagnements.title }}</h2></div>
     <div class="cards">
-{% for card in home.accompagnements.cards %}      <article class="card reveal"{% if not loop.first %} style="transition-delay:calc({{ loop.index0 }} * .07s)"{% endif %}><span class="badge">{{ loop.index }}</span><h3>{{ card.title }}</h3><p>{{ card.text }}</p></article>
+{% for card in home.accompagnements.cards %}      <article class="card reveal"{% if not loop.first %} style="transition-delay:calc({{ loop.index0 }} * .07s)"{% endif %}><h3>{{ card.title }}</h3><p>{{ card.text }}</p></article>
 {% endfor %}    </div>
     <div style="margin-top:30px" class="reveal"><a class="btn btn-out" href="accompagnements.html">{{ home.accompagnements.ctaLabel }}</a></div>
   </div>

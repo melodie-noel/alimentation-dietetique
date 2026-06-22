@@ -321,11 +321,15 @@ footer{background:#20211b;color:#bcd3bf;padding:56px 0 26px}
 .myths li{position:relative;background:#fff;border:1px dashed var(--line);border-radius:999px;padding:10px 20px 10px 38px;color:var(--ink);font-style:italic;opacity:.9}
 .myths li::before{content:"\2715";position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--corail);font-style:normal;font-weight:800}
 /* Nouveau logo (SVG) */
-.brand-logo{height:52px;width:auto;display:block}
+.brand-logo{height:72px;width:auto;display:block}
 .foot-logo{height:46px;width:auto;display:block}
-@media(max-width:560px){.brand-logo{height:44px}}
+@media(max-width:560px){.brand-logo{height:54px}}
 /* Mon approche : note rassurante intégrée au bloc hypnose */
 .pill .approche-note{margin:13px 0 0;padding-top:12px;border-top:1px solid var(--line);font-family:'Caveat',cursive;font-weight:600;font-size:1.32rem;line-height:1.25;color:var(--terra)}
 .t-ink{border-color:#cfc7ba;color:#34312A}
 .feat-card .ico img,.approach-card .ico img{width:26px;height:26px;display:block}
 .cta-elan{font-family:'Caveat',cursive;font-weight:600;font-size:1.65rem;line-height:1.2;color:var(--vert);margin:0 0 30px}
+.cards .card{position:relative;overflow:hidden}
+.cards .card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--vert)}
+.cards .card:nth-child(2)::before{background:var(--corail)}
+.cards .card:nth-child(3)::before{background:var(--terra)}

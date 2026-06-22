@@ -104,7 +104,7 @@ ogDescription: "Bien manger, mieux travailler. Des interventions originales alli
       <p>{{ entreprise.cta.text | safe }}</p>
       <div class="tarifs" style="justify-content:center">
         <a class="btn btn-dark" href="contact.html#formulaire">{{ entreprise.cta.btnContact }}</a>
-        <a class="btn btn-out" href="assets/flyers/flyer-entreprise.pdf" target="_blank" rel="noopener" aria-label="Télécharger la plaquette entreprise (PDF)">{{ entreprise.cta.btnPlaquette }}</a>
+        <a class="btn btn-out" href="{{ entreprise.cta.flyer }}" target="_blank" rel="noopener" aria-label="Télécharger la plaquette entreprise (PDF)">{{ entreprise.cta.btnPlaquette }}</a>
       </div>
     </div>
   </section>
