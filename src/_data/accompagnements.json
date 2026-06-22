@@ -1,0 +1,117 @@
+{
+  "hero": {
+    "eyebrow": "Cabinet libéral · Maisons-Alfort · Téléconsultation",
+    "titleBefore": "Manger avec ",
+    "titleHand": "plaisir",
+    "titleAfter": ", vivre en équilibre.",
+    "lead": "Un accompagnement nutritionnel et émotionnel sur mesure, ancré dans la réalité de votre quotidien. Pas de régime, pas de privation — une relation apaisée avec l'alimentation."
+  },
+  "dietetique": {
+    "eyebrow": "Les séances diététique",
+    "title": "Un suivi nutritionnel concret, à votre rythme",
+    "lead": "Pour la gestion du poids comme pour mieux vivre avec une pathologie (diabète, cholestérol, troubles digestifs…), on construit ensemble une démarche réaliste — sans régime ni privation.",
+    "card1Title": "Le bilan",
+    "card1Text": "Tout commence par un bilan complet : votre histoire, vos habitudes, votre mode de vie et vos objectifs. Ce premier temps me permet de comprendre votre situation dans sa globalité et de poser, ensemble, des bases saines et tenables.",
+    "card2Title": "Les suivis",
+    "card2Text": "On avance ensuite pas à pas, avec des rendez-vous réguliers pour ajuster, encourager et ancrer durablement les changements. Des conseils simples, applicables dès le lendemain, qui respectent vos goûts et votre quotidien.",
+    "ctaLabel": "Prendre rendez-vous",
+    "ctaHref": "contact.html#formulaire"
+  },
+  "hypnose": {
+    "eyebrow": "Mon ingrédient secret",
+    "title": "L'hypnose pour une approche globale",
+    "lead": "L'hypnose ericksonienne n'est pas de la magie : c'est un outil thérapeutique puissant pour travailler en profondeur sur les comportements et les émotions.",
+    "intro": "Donnez une nouvelle impulsion à votre quotidien en explorant des thématiques telles que :",
+    "items": [
+      {
+        "strong": "Une relation plus sereine avec l'alimentation",
+        "text": "moins de compulsions, de grignotages et de perte de contrôle."
+      },
+      {
+        "strong": "Une meilleure estime de soi",
+        "text": "plus de bienveillance que d'autocritique envers son corps."
+      },
+      {
+        "strong": "Une motivation durable",
+        "text": "fini les élans qui s'essoufflent après quelques jours."
+      },
+      {
+        "strong": "Moins de stress, un meilleur sommeil",
+        "text": "plus de calme, de détente et de récupération."
+      },
+      {
+        "strong": "Des transitions de vie plus sereines",
+        "text": "en mobilisant vos ressources face aux défis du quotidien."
+      }
+    ],
+    "ctaLabel": "Prendre rendez-vous",
+    "ctaHref": "contact.html#formulaire",
+    "quote": "Il suffit parfois d'un léger déclic, d'une nouvelle perspective, pour que tout commence à changer.",
+    "quoteCite": "— Mélodie Noël"
+  },
+  "band": {
+    "textBefore": "Diététique, hypnose ou les deux : ",
+    "textHand": "à chacun sa façon d'avancer."
+  },
+  "idees": {
+    "eyebrow": "On démêle le vrai du faux",
+    "title": "Stop aux idées reçues",
+    "myths": [
+      "Je ne suis pas réceptif",
+      "Je vais perdre le contrôle",
+      "Je dois absolument lâcher prise",
+      "Je vais simplement dormir",
+      "Je risque d'être manipulé(e)"
+    ],
+    "note": "Ces idées sont très répandues, mais ne reflètent pas la réalité de l'hypnose. Et plutôt que d'en parler… le plus simple reste de venir l'expérimenter."
+  },
+  "deroule": {
+    "eyebrow": "Comment ça se passe",
+    "title": "Le déroulé d'une séance",
+    "text": "Les séances durent entre 45 minutes et 1 heure et alternent temps d'échange et temps de travail intérieur. Vous êtes simplement assis(e) au cabinet. Après avoir défini ensemble l'objectif du jour, nous choisissons le protocole de travail le plus adapté."
+  },
+  "approche": {
+    "eyebrow": "Ma méthode",
+    "title": "Mon approche, à votre image",
+    "card1Title": "Je prends le temps",
+    "card1Text": "Un premier bilan approfondi pour cerner votre personnalité, vos habitudes, vos contraintes réelles. Pas de solution générique.",
+    "card2Title": "Je reste simple et concret",
+    "card2Text": "Des trucs & astuces applicables dès le lendemain, des conseils qui respectent vos goûts et votre mode de vie.",
+    "card3Title": "Je reste disponible",
+    "card3Text": "Une question entre deux séances ? Je réponds. L'accompagnement ne s'arrête pas à la porte du cabinet."
+  },
+  "tarifs": {
+    "eyebrow": "Tarifs",
+    "title": "Des séances claires, sans surprise",
+    "lead": "Uniquement sur rendez-vous — au cabinet, à distance (visio ou téléphone) ou à domicile (majoration pour frais de déplacement).",
+    "rows": [
+      {
+        "nom": "Bilan nutritionnel",
+        "duree": "30 à 45 min",
+        "prix": "70"
+      },
+      {
+        "nom": "Séance de suivi",
+        "duree": "15 à 30 min",
+        "prix": "40"
+      },
+      {
+        "nom": "Séance enfant",
+        "duree": "30 à 45 min",
+        "prix": "70"
+      },
+      {
+        "nom": "Séance hypnose",
+        "duree": "45 min à 1 h",
+        "prix": "85"
+      }
+    ],
+    "note": "Consultations non remboursées par la Sécurité sociale (la CMU ne s'applique pas). Factures pour mutuelles disponibles sur demande. Tout rendez-vous non annulé 24 h à l'avance reste dû."
+  },
+  "cta": {
+    "title": "Et si on en parlait ?",
+    "text": "Un premier échange pour faire connaissance et voir, ensemble, comment je peux vous accompagner.",
+    "ctaLabel": "Prendre rendez-vous",
+    "ctaHref": "https://www.doctolib.fr/dieteticien/maisons-alfort/melodie-noel"
+  }
+}

@@ -160,7 +160,6 @@ collections:
                       - { label: "Corail", value: "corail" }
                       - { label: "Doré", value: "gold" }
                       - { label: "Terracotta", value: "terra" }
-                      - { label: "Clémentine", value: "clem" }
                       - { label: "Anthracite", value: "ink" }
           - label: "Section « Trois formats »"
             name: formats
@@ -208,7 +207,6 @@ collections:
                       - { label: "Corail", value: "corail" }
                       - { label: "Doré", value: "gold" }
                       - { label: "Terracotta", value: "terra" }
-                      - { label: "Clémentine", value: "clem" }
                       - { label: "Anthracite", value: "ink" }
           - label: "Encart « séance individuelle »"
             name: encart
@@ -232,3 +230,104 @@ collections:
                 media_folder: "/src/assets/flyers"
                 public_folder: "/assets/flyers"
                 hint: "Téléversez ici la plaquette PDF à jour (couleurs actualisées) ; elle remplacera l'actuelle."
+      - name: accompagnements
+        label: Page Accompagnements
+        file: src/_data/accompagnements.json
+        format: json
+        fields:
+          - label: "Héro (haut de page)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre — début", name: titleBefore, widget: string }
+              - { label: "Titre — mot manuscrit", name: titleHand, widget: string }
+              - { label: "Titre — fin", name: titleAfter, widget: string }
+              - { label: "Accroche", name: lead, widget: text }
+          - label: "Section « Les séances diététique »"
+            name: dietetique
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Accroche", name: lead, widget: text }
+              - { label: "Carte 1 — titre", name: card1Title, widget: string }
+              - { label: "Carte 1 — texte", name: card1Text, widget: text }
+              - { label: "Carte 2 — titre", name: card2Title, widget: string }
+              - { label: "Carte 2 — texte", name: card2Text, widget: text }
+              - { label: "Libellé du bouton", name: ctaLabel, widget: string }
+              - { label: "Lien du bouton", name: ctaHref, widget: string }
+          - label: "Section « Hypnose »"
+            name: hypnose
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Accroche", name: lead, widget: text }
+              - { label: "Phrase d'introduction", name: intro, widget: text }
+              - label: "Thématiques (liste)"
+                name: items
+                widget: list
+                fields:
+                  - { label: "En gras", name: strong, widget: string }
+                  - { label: "Suite de la phrase", name: text, widget: string }
+              - { label: "Libellé du bouton", name: ctaLabel, widget: string }
+              - { label: "Lien du bouton", name: ctaHref, widget: string }
+              - { label: "Citation", name: quote, widget: text }
+              - { label: "Signature de la citation", name: quoteCite, widget: string }
+          - label: "Bande « à chacun sa façon »"
+            name: band
+            widget: object
+            fields:
+              - { label: "Début de phrase", name: textBefore, widget: string }
+              - { label: "Fin manuscrite", name: textHand, widget: string }
+          - label: "Section « Stop aux idées reçues »"
+            name: idees
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Idées reçues (sans les guillemets)", name: myths, widget: list, field: { label: "Idée reçue", name: myth, widget: string } }
+              - { label: "Phrase de conclusion", name: note, widget: text }
+          - label: "Section « Déroulé d'une séance »"
+            name: deroule
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Texte", name: text, widget: text }
+          - label: "Section « Mon approche »"
+            name: approche
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Carte 1 — titre", name: card1Title, widget: string }
+              - { label: "Carte 1 — texte", name: card1Text, widget: text }
+              - { label: "Carte 2 — titre", name: card2Title, widget: string }
+              - { label: "Carte 2 — texte", name: card2Text, widget: text }
+              - { label: "Carte 3 — titre", name: card3Title, widget: string }
+              - { label: "Carte 3 — texte", name: card3Text, widget: text }
+          - label: "Section « Tarifs »"
+            name: tarifs
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Accroche", name: lead, widget: text }
+              - label: "Lignes du tableau"
+                name: rows
+                widget: list
+                fields:
+                  - { label: "Prestation", name: nom, widget: string }
+                  - { label: "Durée", name: duree, widget: string }
+                  - { label: "Tarif (chiffre seul, sans €)", name: prix, widget: string }
+              - { label: "Note (bas du tableau)", name: note, widget: text }
+          - label: "Bloc final « Et si on en parlait ? »"
+            name: cta
+            widget: object
+            fields:
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Texte", name: text, widget: text }
+              - { label: "Libellé du bouton", name: ctaLabel, widget: string }
+              - { label: "Lien du bouton", name: ctaHref, widget: string }

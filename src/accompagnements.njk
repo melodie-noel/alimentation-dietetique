@@ -8,15 +8,14 @@ themeColor: "#F3AE26"
 ogTitle: "Accompagnements — Mélodie Noël, Diététique & Hypnose"
 ogDescription: "Manger avec plaisir, vivre en équilibre. Un accompagnement sur mesure, sans régime ni privation."
 ---
-{% raw %}
 <main id="main">
 
   <!-- HERO -->
   <section class="page-hero page-hero--gold">
     <div class="wrap">
-      <p class="eyebrow">Cabinet libéral · Maisons-Alfort · Téléconsultation</p>
-      <h1>Manger avec <span class="hand">plaisir</span>, vivre en équilibre.</h1>
-      <p class="lead">Un accompagnement nutritionnel et émotionnel sur mesure, ancré dans la réalité de votre quotidien. Pas de régime, pas de privation — une relation apaisée avec l'alimentation.</p>
+      <p class="eyebrow">{{ accompagnements.hero.eyebrow }}</p>
+      <h1>{{ accompagnements.hero.titleBefore }}<span class="hand">{{ accompagnements.hero.titleHand }}</span>{{ accompagnements.hero.titleAfter }}</h1>
+      <p class="lead">{{ accompagnements.hero.lead }}</p>
     </div>
   </section>
 
@@ -24,23 +23,23 @@ ogDescription: "Manger avec plaisir, vivre en équilibre. Un accompagnement sur 
   <section class="sec" id="dietetique">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">Les séances diététique</p>
-        <h2>Un suivi nutritionnel concret, à votre rythme</h2>
+        <p class="eyebrow">{{ accompagnements.dietetique.eyebrow }}</p>
+        <h2>{{ accompagnements.dietetique.title }}</h2>
       </div>
-      <p class="lead" style="max-width:54em">Pour la gestion du poids comme pour mieux vivre avec une pathologie (diabète, cholestérol, troubles digestifs…), on construit ensemble une démarche réaliste — sans régime ni privation.</p>
+      <p class="lead" style="max-width:54em">{{ accompagnements.dietetique.lead }}</p>
       <div class="duo">
         <article class="approach-card">
           <span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4E9D3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4.5h6V7H9z"/><path d="M9 11.5h6M9 15h4"/></svg></span>
-          <h3>Le bilan</h3>
-          <p>Tout commence par un bilan complet : votre histoire, vos habitudes, votre mode de vie et vos objectifs. Ce premier temps me permet de comprendre votre situation dans sa globalité et de poser, ensemble, des bases saines et tenables.</p>
+          <h3>{{ accompagnements.dietetique.card1Title }}</h3>
+          <p>{{ accompagnements.dietetique.card1Text }}</p>
         </article>
         <article class="approach-card">
           <span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4E9D3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16"/><path d="M7 19v-4M12 19v-7M17 19v-11"/><path d="M15 8l2-2 2 2"/></svg></span>
-          <h3>Les suivis</h3>
-          <p>On avance ensuite pas à pas, avec des rendez-vous réguliers pour ajuster, encourager et ancrer durablement les changements. Des conseils simples, applicables dès le lendemain, qui respectent vos goûts et votre quotidien.</p>
+          <h3>{{ accompagnements.dietetique.card2Title }}</h3>
+          <p>{{ accompagnements.dietetique.card2Text }}</p>
         </article>
       </div>
-      <div style="text-align:center;margin-top:30px"><a class="btn btn-dark" href="contact.html#formulaire">Prendre rendez-vous</a></div>
+      <div style="text-align:center;margin-top:30px"><a class="btn btn-dark" href="{{ accompagnements.dietetique.ctaHref }}">{{ accompagnements.dietetique.ctaLabel }}</a></div>
     </div>
   </section>
 
@@ -49,23 +48,19 @@ ogDescription: "Manger avec plaisir, vivre en équilibre. Un accompagnement sur 
     <div class="wrap split">
       <div>
         <div class="sec-head">
-          <p class="eyebrow">Mon ingrédient secret</p>
-          <h2>L'hypnose pour une approche globale</h2>
+          <p class="eyebrow">{{ accompagnements.hypnose.eyebrow }}</p>
+          <h2>{{ accompagnements.hypnose.title }}</h2>
         </div>
-        <p class="lead">L'hypnose ericksonienne n'est pas de la magie : c'est un outil thérapeutique puissant pour travailler en profondeur sur les comportements et les émotions.</p>
-        <p>Donnez une nouvelle impulsion à votre quotidien en explorant des thématiques telles que :</p>
+        <p class="lead">{{ accompagnements.hypnose.lead }}</p>
+        <p>{{ accompagnements.hypnose.intro }}</p>
         <ul class="feature-list">
-          <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#4E9D3F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><strong>Une relation plus sereine avec l'alimentation</strong> — moins de compulsions, de grignotages et de perte de contrôle.</span></li>
-          <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#4E9D3F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><strong>Une meilleure estime de soi</strong> — plus de bienveillance que d'autocritique envers son corps.</span></li>
-          <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#4E9D3F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><strong>Une motivation durable</strong> — fini les élans qui s'essoufflent après quelques jours.</span></li>
-          <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#4E9D3F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><strong>Moins de stress, un meilleur sommeil</strong> — plus de calme, de détente et de récupération.</span></li>
-          <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#4E9D3F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><strong>Des transitions de vie plus sereines</strong> — en mobilisant vos ressources face aux défis du quotidien.</span></li>
-        </ul>
-        <a class="btn btn-out" href="contact.html#formulaire">Prendre rendez-vous</a>
+{% for it in accompagnements.hypnose.items %}          <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#4E9D3F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><strong>{{ it.strong }}</strong> — {{ it.text }}</span></li>
+{% endfor %}        </ul>
+        <a class="btn btn-out" href="{{ accompagnements.hypnose.ctaHref }}">{{ accompagnements.hypnose.ctaLabel }}</a>
       </div>
       <aside class="quote-block">
-        <p>« Il suffit parfois d'un léger déclic, d'une nouvelle perspective, pour que tout commence à changer. »</p>
-        <cite>— Mélodie Noël</cite>
+        <p>« {{ accompagnements.hypnose.quote }} »</p>
+        <cite>{{ accompagnements.hypnose.quoteCite }}</cite>
       </aside>
     </div>
   </section>
@@ -73,7 +68,7 @@ ogDescription: "Manger avec plaisir, vivre en équilibre. Un accompagnement sur 
   <!-- BANDE : à chacun sa façon -->
   <section class="sec">
     <div class="wrap">
-      <p class="highlight-band">Diététique, hypnose ou les deux : <span class="hand">à chacun sa façon d'avancer.</span></p>
+      <p class="highlight-band">{{ accompagnements.band.textBefore }}<span class="hand">{{ accompagnements.band.textHand }}</span></p>
     </div>
   </section>
 
@@ -81,17 +76,13 @@ ogDescription: "Manger avec plaisir, vivre en équilibre. Un accompagnement sur 
   <section class="sec alt" id="idees-recues">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">On démêle le vrai du faux</p>
-        <h2>Stop aux idées reçues</h2>
+        <p class="eyebrow">{{ accompagnements.idees.eyebrow }}</p>
+        <h2>{{ accompagnements.idees.title }}</h2>
       </div>
       <ul class="myths">
-        <li>« Je ne suis pas réceptif »</li>
-        <li>« Je vais perdre le contrôle »</li>
-        <li>« Je dois absolument lâcher prise »</li>
-        <li>« Je vais simplement dormir »</li>
-        <li>« Je risque d'être manipulé(e) »</li>
-      </ul>
-      <p class="lead" style="text-align:center;max-width:48em;margin:26px auto 0">Ces idées sont très répandues, mais ne reflètent pas la réalité de l'hypnose. Et plutôt que d'en parler… le plus simple reste de venir l'expérimenter.</p>
+{% for m in accompagnements.idees.myths %}        <li>« {{ m }} »</li>
+{% endfor %}      </ul>
+      <p class="lead" style="text-align:center;max-width:48em;margin:26px auto 0">{{ accompagnements.idees.note }}</p>
     </div>
   </section>
 
@@ -99,10 +90,10 @@ ogDescription: "Manger avec plaisir, vivre en équilibre. Un accompagnement sur 
   <section class="sec" id="deroule">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">Comment ça se passe</p>
-        <h2>Le déroulé d'une séance</h2>
+        <p class="eyebrow">{{ accompagnements.deroule.eyebrow }}</p>
+        <h2>{{ accompagnements.deroule.title }}</h2>
       </div>
-      <p class="lead" style="max-width:54em;margin:0 auto;text-align:center">Les séances durent entre 45 minutes et 1 heure et alternent temps d'échange et temps de travail intérieur. Vous êtes simplement assis(e) au cabinet. Après avoir défini ensemble l'objectif du jour, nous choisissons le protocole de travail le plus adapté.</p>
+      <p class="lead" style="max-width:54em;margin:0 auto;text-align:center">{{ accompagnements.deroule.text }}</p>
     </div>
   </section>
 
@@ -110,24 +101,24 @@ ogDescription: "Manger avec plaisir, vivre en équilibre. Un accompagnement sur 
   <section class="sec acid" id="approche">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">Ma méthode</p>
-        <h2>Mon approche, à votre image</h2>
+        <p class="eyebrow">{{ accompagnements.approche.eyebrow }}</p>
+        <h2>{{ accompagnements.approche.title }}</h2>
       </div>
       <div class="approach-grid">
         <article class="approach-card">
           <span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#4E9D3F" stroke-width="2"/><path d="M12 7.5V12l3 2" stroke="#4E9D3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <h3>Je prends le temps</h3>
-          <p>Un premier bilan approfondi pour cerner votre personnalité, vos habitudes, vos contraintes réelles. Pas de solution générique.</p>
+          <h3>{{ accompagnements.approche.card1Title }}</h3>
+          <p>{{ accompagnements.approche.card1Text }}</p>
         </article>
         <article class="approach-card">
           <span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#4E9D3F" stroke-width="2"/><path d="M8.5 14c.9 1.1 2.1 1.7 3.5 1.7s2.6-.6 3.5-1.7" stroke="#4E9D3F" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="10" r="1" fill="#4E9D3F"/><circle cx="15" cy="10" r="1" fill="#4E9D3F"/></svg></span>
-          <h3>Je reste simple et concret</h3>
-          <p>Des trucs &amp; astuces applicables dès le lendemain, des conseils qui respectent vos goûts et votre mode de vie.</p>
+          <h3>{{ accompagnements.approche.card2Title }}</h3>
+          <p>{{ accompagnements.approche.card2Text }}</p>
         </article>
         <article class="approach-card">
           <span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 6h14a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H10l-4 3v-3H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" stroke="#4E9D3F" stroke-width="2" stroke-linejoin="round"/></svg></span>
-          <h3>Je reste disponible</h3>
-          <p>Une question entre deux séances ? Je réponds. L'accompagnement ne s'arrête pas à la porte du cabinet.</p>
+          <h3>{{ accompagnements.approche.card3Title }}</h3>
+          <p>{{ accompagnements.approche.card3Text }}</p>
         </article>
       </div>
     </div>
@@ -137,31 +128,27 @@ ogDescription: "Manger avec plaisir, vivre en équilibre. Un accompagnement sur 
   <section class="sec" id="tarifs">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">Tarifs</p>
-        <h2>Des séances claires, sans surprise</h2>
+        <p class="eyebrow">{{ accompagnements.tarifs.eyebrow }}</p>
+        <h2>{{ accompagnements.tarifs.title }}</h2>
       </div>
-      <p class="lead" style="margin-bottom:6px">Uniquement sur rendez-vous — au cabinet, à distance (visio ou téléphone) ou à domicile (majoration pour frais de déplacement).</p>
+      <p class="lead" style="margin-bottom:6px">{{ accompagnements.tarifs.lead }}</p>
       <table class="tarif-table">
         <thead><tr><th scope="col">Prestation</th><th scope="col">Durée</th><th scope="col" class="r">Tarif</th></tr></thead>
         <tbody>
-          <tr><td class="nm">Bilan nutritionnel</td><td>30 à 45 min</td><td class="pr">70&nbsp;€</td></tr>
-          <tr><td class="nm">Séance de suivi</td><td>15 à 30 min</td><td class="pr">40&nbsp;€</td></tr>
-          <tr><td class="nm">Séance enfant</td><td>30 à 45 min</td><td class="pr">70&nbsp;€</td></tr>
-          <tr><td class="nm">Séance hypnose</td><td>45 min à 1 h</td><td class="pr">85&nbsp;€</td></tr>
-        </tbody>
+{% for r in accompagnements.tarifs.rows %}          <tr><td class="nm">{{ r.nom }}</td><td>{{ r.duree }}</td><td class="pr">{{ r.prix }}&nbsp;€</td></tr>
+{% endfor %}        </tbody>
       </table>
-      <p class="tarif-note">Consultations non remboursées par la Sécurité sociale (la CMU ne s'applique pas). Factures pour mutuelles disponibles sur demande. Tout rendez-vous non annulé 24&nbsp;h à l'avance reste dû.</p>
+      <p class="tarif-note">{{ accompagnements.tarifs.note }}</p>
     </div>
   </section>
 
   <!-- CTA -->
   <section class="cta-band">
     <div class="wrap">
-      <h2>Et si on en parlait ?</h2>
-      <p>Un premier échange pour faire connaissance et voir, ensemble, comment je peux vous accompagner.</p>
-      <a class="btn btn-dark" href="https://www.doctolib.fr/dieteticien/maisons-alfort/melodie-noel" target="_blank" rel="noopener">Prendre rendez-vous</a>
+      <h2>{{ accompagnements.cta.title }}</h2>
+      <p>{{ accompagnements.cta.text }}</p>
+      <a class="btn btn-dark" href="{{ accompagnements.cta.ctaHref }}" target="_blank" rel="noopener">{{ accompagnements.cta.ctaLabel }}</a>
     </div>
   </section>
 
 </main>
-{% endraw %}
