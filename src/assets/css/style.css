@@ -342,3 +342,10 @@ footer{background:#20211b;color:#bcd3bf;padding:56px 0 26px}
 .pullquote p{font-family:'Caveat',cursive;font-size:clamp(1.45rem,3vw,1.75rem);color:var(--terra);line-height:1.3;margin:0}
 .pullquote figcaption{font-size:.86rem;color:var(--ink);opacity:.7;margin-top:6px}
 @media(max-width:720px){.theme-grid{grid-template-columns:1fr}}
+/* À propos : Qui suis-je (facettes) + paragraphes de l'encart honnêtes */
+.facets{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:760px;margin:6px auto 0}
+.facet{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 24px}
+.facet p{margin:0;font-size:1.08rem;color:var(--ink);line-height:1.45}
+.facet strong{color:var(--vert);font-weight:700}
+.note-box p + p{margin-top:14px}
+@media(max-width:640px){.facets{grid-template-columns:1fr}}
