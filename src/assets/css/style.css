@@ -321,9 +321,9 @@ footer{background:#20211b;color:#bcd3bf;padding:56px 0 26px}
 .myths li{position:relative;background:#fff;border:1px dashed var(--line);border-radius:999px;padding:10px 20px 10px 38px;color:var(--ink);font-style:italic;opacity:.9}
 .myths li::before{content:"\2715";position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--corail);font-style:normal;font-weight:800}
 /* Nouveau logo (SVG) */
-.brand-logo{height:120px;width:auto;display:block}
+.brand-logo{height:71px;width:auto;display:block}
 .foot-logo{height:52px;width:auto;display:block}
-@media(max-width:560px){.nav{height:92px}.brand-logo{height:64px}}
+@media(max-width:560px){.nav{height:92px}.brand-logo{height:38px}}
 /* Mon approche : note rassurante intégrée au bloc hypnose */
 .pill .approche-note{margin:13px 0 0;padding-top:12px;border-top:1px solid var(--line);font-family:'Caveat',cursive;font-weight:600;font-size:1.32rem;line-height:1.25;color:var(--terra)}
 .t-ink{border-color:#cfc7ba;color:#34312A}
@@ -331,3 +331,14 @@ footer{background:#20211b;color:#bcd3bf;padding:56px 0 26px}
 .cta-elan{font-family:'Caveat',cursive;font-weight:600;font-size:1.65rem;line-height:1.2;color:var(--terra);margin:0 0 30px}
 .cards .card{position:relative;overflow:hidden}
 .cards .card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--vert)}
+/* Section hypnose : affichage allégé (grille de thèmes + citation) */
+.theme-grid{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:18px 42px;margin:26px 0 32px;padding:0}
+.theme-grid li{display:block}
+.theme-grid .th{display:block}
+.theme-grid .th svg{vertical-align:-3px;margin-right:9px}
+.theme-grid .th strong{font-weight:700;color:var(--ink);line-height:1.3}
+.theme-grid em{display:block;font-style:normal;font-size:.88rem;color:var(--ink);opacity:.68;margin:4px 0 0 27px;line-height:1.45}
+.pullquote{max-width:36em;margin:4px auto 0;text-align:center}
+.pullquote p{font-family:'Caveat',cursive;font-size:clamp(1.45rem,3vw,1.75rem);color:var(--terra);line-height:1.3;margin:0}
+.pullquote figcaption{font-size:.86rem;color:var(--ink);opacity:.7;margin-top:6px}
+@media(max-width:720px){.theme-grid{grid-template-columns:1fr}}

@@ -45,23 +45,21 @@ ogDescription: "Manger avec plaisir, vivre en équilibre. Un accompagnement sur 
 
   <!-- MON INGRÉDIENT SECRET (HYPNOSE) -->
   <section class="sec acid" id="hypnose">
-    <div class="wrap split">
-      <div>
-        <div class="sec-head">
-          <p class="eyebrow">{{ accompagnements.hypnose.eyebrow }}</p>
-          <h2>{{ accompagnements.hypnose.title }}</h2>
-        </div>
-        <p class="lead">{{ accompagnements.hypnose.lead }}</p>
-        <p>{{ accompagnements.hypnose.intro }}</p>
-        <ul class="feature-list">
-{% for it in accompagnements.hypnose.items %}          <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#4E9D3F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <span><strong>{{ it.strong }}</strong> — {{ it.text }}</span></li>
-{% endfor %}        </ul>
-        <a class="btn btn-out" href="{{ accompagnements.hypnose.ctaHref }}">{{ accompagnements.hypnose.ctaLabel }}</a>
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">{{ accompagnements.hypnose.eyebrow }}</p>
+        <h2>{{ accompagnements.hypnose.title }}</h2>
       </div>
-      <aside class="quote-block">
+      <p class="lead" style="max-width:52em">{{ accompagnements.hypnose.lead }}</p>
+      <p style="max-width:52em">{{ accompagnements.hypnose.intro }}</p>
+      <ul class="theme-grid">
+{% for it in accompagnements.hypnose.items %}        <li><span class="th"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" stroke="#4E9D3F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>{{ it.strong }}</strong></span><em>{{ it.text }}</em></li>
+{% endfor %}      </ul>
+      <figure class="pullquote">
         <p>« {{ accompagnements.hypnose.quote }} »</p>
-        <cite>{{ accompagnements.hypnose.quoteCite }}</cite>
-      </aside>
+        <figcaption>{{ accompagnements.hypnose.quoteCite }}</figcaption>
+      </figure>
+      <div style="text-align:center;margin-top:6px"><a class="btn btn-out" href="{{ accompagnements.hypnose.ctaHref }}">{{ accompagnements.hypnose.ctaLabel }}</a></div>
     </div>
   </section>
 
@@ -72,33 +70,8 @@ ogDescription: "Manger avec plaisir, vivre en équilibre. Un accompagnement sur 
     </div>
   </section>
 
-  <!-- STOP AUX IDÉES REÇUES -->
-  <section class="sec alt" id="idees-recues">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">{{ accompagnements.idees.eyebrow }}</p>
-        <h2>{{ accompagnements.idees.title }}</h2>
-      </div>
-      <ul class="myths">
-{% for m in accompagnements.idees.myths %}        <li>« {{ m }} »</li>
-{% endfor %}      </ul>
-      <p class="lead" style="text-align:center;max-width:48em;margin:26px auto 0">{{ accompagnements.idees.note }}</p>
-    </div>
-  </section>
-
-  <!-- DÉROULÉ D'UNE SÉANCE -->
-  <section class="sec" id="deroule">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">{{ accompagnements.deroule.eyebrow }}</p>
-        <h2>{{ accompagnements.deroule.title }}</h2>
-      </div>
-      <p class="lead" style="max-width:54em;margin:0 auto;text-align:center">{{ accompagnements.deroule.text }}</p>
-    </div>
-  </section>
-
   <!-- MON APPROCHE -->
-  <section class="sec acid" id="approche">
+  <section class="sec alt" id="approche">
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">{{ accompagnements.approche.eyebrow }}</p>
@@ -121,6 +94,31 @@ ogDescription: "Manger avec plaisir, vivre en équilibre. Un accompagnement sur 
           <p>{{ accompagnements.approche.card3Text }}</p>
         </article>
       </div>
+    </div>
+  </section>
+
+  <!-- DÉROULÉ D'UNE SÉANCE -->
+  <section class="sec" id="deroule">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">{{ accompagnements.deroule.eyebrow }}</p>
+        <h2>{{ accompagnements.deroule.title }}</h2>
+      </div>
+      <p class="lead" style="max-width:54em;margin:0 auto;text-align:center">{{ accompagnements.deroule.text }}</p>
+    </div>
+  </section>
+
+  <!-- STOP AUX IDÉES REÇUES -->
+  <section class="sec acid" id="idees-recues">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">{{ accompagnements.idees.eyebrow }}</p>
+        <h2>{{ accompagnements.idees.title }}</h2>
+      </div>
+      <ul class="myths">
+{% for m in accompagnements.idees.myths %}        <li>« {{ m }} »</li>
+{% endfor %}      </ul>
+      <p class="lead" style="text-align:center;max-width:48em;margin:26px auto 0">{{ accompagnements.idees.note }}</p>
     </div>
   </section>
 
