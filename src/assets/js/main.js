@@ -25,7 +25,7 @@
     if(bn) bn.addEventListener('click',function(){next();restart()});
     if(bp) bp.addEventListener('click',function(){prev();restart()});
     var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    function start(){ if(reduce) return; timer=setInterval(next,6000); }
+    function start(){ if(reduce) return; timer=setInterval(next,4200); }
     function stop(){ if(timer){clearInterval(timer);timer=null;} }
     function restart(){ stop(); start(); }
     c.addEventListener('mouseenter',stop); c.addEventListener('mouseleave',start);
