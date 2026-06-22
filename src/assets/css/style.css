@@ -322,7 +322,7 @@ footer{background:#20211b;color:#bcd3bf;padding:56px 0 26px}
 .myths li::before{content:"\2715";position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--corail);font-style:normal;font-weight:800}
 /* Nouveau logo (SVG) */
 .brand-logo{height:120px;width:auto;display:block}
-.foot-logo{height:46px;width:auto;display:block}
+.foot-logo{height:68px;width:auto;display:block}
 @media(max-width:560px){.nav{height:92px}.brand-logo{height:64px}}
 /* Mon approche : note rassurante intégrée au bloc hypnose */
 .pill .approche-note{margin:13px 0 0;padding-top:12px;border-top:1px solid var(--line);font-family:'Caveat',cursive;font-weight:600;font-size:1.32rem;line-height:1.25;color:var(--terra)}
