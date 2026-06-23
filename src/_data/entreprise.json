@@ -11,11 +11,11 @@
     },
     {
       "icon": "/assets/img/icons/ico-ampoule.svg",
-      "text": "Des interventions centrées sur la diététique, complétées par des outils d'hypnose pour explorer les mécanismes du changement."
+      "text": "Une approche centrée sur la diététique, complétée par des outils d'hypnose pour explorer les mécanismes du changement."
     },
     {
       "icon": "/assets/img/icons/ico-doc.svg",
-      "text": "Une intervention qui donne envie d'agir, avec des conseils réalistes, accessibles et adaptés à la vraie vie."
+      "text": "Un contenu qui donne envie d'agir, avec des conseils réalistes, accessibles et adaptés à la vraie vie."
     },
     {
       "icon": "/assets/img/icons/ico-coeur.svg",
@@ -134,7 +134,9 @@
           "3 · Télétravail et compulsions alimentaires"
         ]
       }
-    ]
+    ],
+    "photo": "assets/img/intervention-atelier.webp",
+    "photoAlt": "Mélodie Noël anime un atelier nutrition en entreprise"
   },
   "themes": {
     "eyebrow": "Idées de sujet",
@@ -162,11 +164,6 @@
         "couleur": "terra"
       }
     ]
-  },
-  "encart": {
-    "eyebrow": "Et pourquoi pas en tête à tête ?",
-    "title": "Offrez à vos collaborateurs une séance individuelle sur site",
-    "text": "Une heure, une personne, un vrai suivi. Chaque séance — diététique &amp; hypnose — est construite autour de la situation personnelle du collaborateur, en toute confidentialité et dans le respect du secret professionnel."
   },
   "cta": {
     "title": "Discutons-en",

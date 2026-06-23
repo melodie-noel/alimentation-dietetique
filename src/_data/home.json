@@ -7,9 +7,9 @@
   },
   "approche": {
     "eyebrow": "Mon approche",
-    "title": "Deux outils, une même intention : atteindre l'équilibre",
-    "intro": "Parce que parfois, soigner ce que vous mangez ne suffit pas toujours : il faut aussi observer ce qui influence votre alimentation. C'est là que mes deux métiers se rejoignent.",
-    "slogan": "En route vers l'équilibre nutritionnel et émotionnel.",
+    "title": "Deux outils, une même intention : atteindre l'équilibre",
+    "intro": "Parce que parfois, soigner ce que vous mangez ne suffit pas toujours : il faut aussi observer ce qui influence votre alimentation.\nC'est là que mes deux métiers se rejoignent.",
+    "slogan": "En route vers l'équilibre nutritionnel et émotionnel : la différence entre tenir un régime… et changer pour de bon.",
     "pills": [
       {
         "tag": "Le concret",
@@ -22,8 +22,7 @@
         "text": "Un travail en douceur sur les émotions, les perceptions et les automatismes, pour que le changement vienne de l'intérieur, à votre rythme."
       }
     ],
-    "note": "Pas envie d'hypnose ? Aucun souci, restons sur la diététique.",
-    "line": "La différence entre tenir un régime… et changer pour de bon."
+    "note": "Pas envie d'hypnose ? Aucun souci, restons sur la diététique."
   },
   "raisons": {
     "eyebrow": "Pourquoi venir me voir",
@@ -57,8 +56,8 @@
     ]
   },
   "accompagnements": {
-    "eyebrow": "Accompagnements",
-    "title": "Comment on travaille ensemble",
+    "eyebrow": "Comment travailler ensemble",
+    "title": "Choisissez ce qui vous correspond.",
     "cards": [
       {
         "title": "Séances Diététique",
@@ -78,14 +77,22 @@
   "entreprise": {
     "eyebrow": "En entreprise",
     "title": "La nutrition au service du bien-être au travail",
-    "intro": "Rééquilibrer l'assiette et l'esprit pour plus d'épanouissement et d'efficacité au travail.",
+    "intro": "Rééquilibrer l'assiette & l'esprit pour plus d'épanouissement et d'efficacité au travail.",
     "points": [
-      "Ateliers & conférences nutrition, en petits groupes",
-      "Accompagnement individuel des salariés (présentiel ou visio)",
+      "Ateliers & conférences nutrition",
+      "Accompagnement individuel des salariés\n(sur site ou visio)",
       "Programmes bien-être & QVT sur mesure",
-      "Une intervenante diplômée, à l'écoute et sans jugement"
+      "Intervenante diplômée, à l'écoute et sans jugement"
     ],
     "ctaLabel": "En savoir plus"
+  },
+  "temoignages": {
+    "eyebrow": "Témoignages",
+    "title": "Ce qu'en disent mes patients",
+    "note": "4,9",
+    "count": "43",
+    "url": "https://www.google.com/maps/search/?api=1&query=M%C3%A9lodie%20No%C3%ABl%20di%C3%A9t%C3%A9ticienne%20Maisons-Alfort",
+    "linkLabel": "Voir tous les avis Google"
   },
   "cta": {
     "eyebrow": "Premier rendez-vous",
