@@ -4,7 +4,7 @@
     "titleBefore": "Manger avec ",
     "titleHand": "plaisir",
     "titleAfter": ", vivre en équilibre.",
-    "lead": "Un accompagnement nutritionnel et émotionnel sur mesure, ancré dans la réalité de votre quotidien. Pas de régime, pas de privation — une relation apaisée avec l'alimentation."
+    "lead": "Un accompagnement nutritionnel & émotionnel sur mesure, ancré dans la réalité de votre quotidien. Pas de régime, pas de privation — une relation apaisée avec l'alimentation."
   },
   "dietetique": {
     "eyebrow": "Les séances diététique",
@@ -16,6 +16,73 @@
     "card2Text": "On avance ensuite pas à pas, avec des rendez-vous réguliers pour ajuster, encourager et ancrer durablement les changements. Des conseils simples, applicables dès le lendemain, qui respectent vos goûts et votre quotidien.",
     "ctaLabel": "Prendre rendez-vous",
     "ctaHref": "contact.html#formulaire"
+  },
+  "pourqui": {
+    "eyebrow": "Pour qui · pour quoi",
+    "title": "À chacun ses besoins",
+    "lead": "Voici quelques exemples de ce sur quoi nous pouvons travailler ensemble. La liste n'est pas exhaustive : votre situation est unique, on construit selon vos besoins.",
+    "groups": [
+      {
+        "nom": "Enfants",
+        "age": "à partir de 6 ans",
+        "mots": [
+          "Croissance",
+          "Allergies",
+          "Repères de portions",
+          "Surpoids"
+        ]
+      },
+      {
+        "nom": "Adolescents",
+        "age": "",
+        "mots": [
+          "Image corporelle",
+          "Alimentation équilibrée",
+          "TCA",
+          "Autonomie alimentaire"
+        ]
+      },
+      {
+        "nom": "Adultes",
+        "age": "",
+        "mots": [
+          "Rééquilibrage alimentaire",
+          "Troubles digestifs",
+          "Pathologies",
+          "Alimentation émotionnelle"
+        ]
+      },
+      {
+        "nom": "Séniors",
+        "age": "",
+        "mots": [
+          "Préservation musculaire",
+          "Appétit",
+          "Dénutrition",
+          "Bien vieillir"
+        ]
+      },
+      {
+        "nom": "Femmes enceintes",
+        "age": "",
+        "mots": [
+          "Besoins nutritionnels",
+          "Gestion du poids",
+          "Diabète gestationnel",
+          "Énergie"
+        ]
+      },
+      {
+        "nom": "Sportifs",
+        "age": "",
+        "mots": [
+          "Performance",
+          "Récupération",
+          "Compétition",
+          "Prévention blessure"
+        ]
+      }
+    ]
   },
   "hypnose": {
     "eyebrow": "Mon ingrédient secret",
@@ -50,7 +117,7 @@
     "quoteCite": "— Mélodie Noël"
   },
   "band": {
-    "textBefore": "Diététique, hypnose ou les deux\u00a0?",
+    "textBefore": "Diététique, hypnose ou les deux ?",
     "textHand": "À chacun sa façon d'avancer."
   },
   "idees": {
@@ -63,7 +130,8 @@
       "Je vais simplement dormir",
       "Je risque d'être manipulé(e)"
     ],
-    "note": "Ces idées sont très répandues, mais ne reflètent pas la réalité de l'hypnose. Et plutôt que d'en parler… le plus simple reste de venir l'expérimenter."
+    "note": "Ces idées sont très répandues, mais ne reflètent pas la réalité de l'hypnose.",
+    "experiment": "Et plutôt que d'en parler… le plus simple reste de venir l'expérimenter."
   },
   "deroule": {
     "eyebrow": "Comment ça se passe",
@@ -71,7 +139,7 @@
     "text": "Les séances durent entre 45 minutes et 1 heure et alternent temps d'échange et temps de travail intérieur. Vous êtes simplement assis(e) au cabinet. Après avoir défini ensemble l'objectif du jour, nous choisissons le protocole de travail le plus adapté."
   },
   "approche": {
-    "eyebrow": "Ma méthode",
+    "eyebrow": "Mon approche",
     "title": "Mon approche, à votre image",
     "card1Title": "Je prends le temps",
     "card1Text": "Un premier bilan approfondi pour cerner votre personnalité, vos habitudes, vos contraintes réelles. Pas de solution générique.",
@@ -113,5 +181,10 @@
     "text": "Un premier échange pour faire connaissance et voir, ensemble, comment je peux vous accompagner.",
     "ctaLabel": "Prendre rendez-vous",
     "ctaHref": "https://www.doctolib.fr/dieteticien/maisons-alfort/melodie-noel"
+  },
+  "specialites": {
+    "eyebrow": "Mes spécialités",
+    "title": "Deux outils, une même intention",
+    "intro": "Diététique, hypnose ou les deux : à chacun sa façon d'avancer vers l'équilibre. Voici les deux leviers sur lesquels je peux vous accompagner."
   }
 }

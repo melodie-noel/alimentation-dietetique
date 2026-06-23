@@ -11,12 +11,14 @@ ogDescription: "Bien manger, mieux travailler. Des interventions originales alli
 <main id="main">
 
   <!-- HERO -->
-  <section class="page-hero page-hero--green has-citrus">
-    <img class="citrus citrus--hero" src="assets/img/orange-photo.png" alt="" aria-hidden="true">
-    <div class="wrap">
-      <p class="eyebrow">{{ entreprise.hero.eyebrow }}</p>
-      <h1>{{ entreprise.hero.title | safe }}</h1>
-      <p class="lead">{{ entreprise.hero.lead }}</p>
+  <section class="page-hero page-hero--green">
+    <div class="wrap page-hero-split">
+      <div class="page-hero-text">
+        <p class="eyebrow">{{ entreprise.hero.eyebrow }}</p>
+        <h1>{{ entreprise.hero.title | safe }}</h1>
+        <p class="lead">{{ entreprise.hero.lead }}</p>
+      </div>
+      <div class="page-hero-illus page-hero-illus--desk" aria-hidden="true"><img src="assets/img/hero-entreprise.webp" alt="" width="1153" height="1023" loading="eager"></div>
     </div>
   </section>
 
@@ -71,6 +73,7 @@ ogDescription: "Bien manger, mieux travailler. Des interventions originales alli
         <h2>{{ entreprise.references.title }}</h2>
       </div>
       <div class="refs">{% for r in entreprise.references.refs %}<div class="ref"><h3>{{ r.nom }}</h3><ul>{% for l in r.lignes %}<li>{{ l }}</li>{% endfor %}</ul></div>{% endfor %}</div>
+      {% if entreprise.references.photo %}<figure class="refs-photo reveal"><img src="{{ entreprise.references.photo }}" alt="{{ entreprise.references.photoAlt }}" loading="lazy"><figcaption>Mélodie en atelier nutrition</figcaption></figure>{% endif %}
     </div>
   </section>
 
@@ -86,19 +89,8 @@ ogDescription: "Bien manger, mieux travailler. Des interventions originales alli
     </div>
   </section>
 
-  <!-- SEANCE INDIVIDUELLE -->
-  <section class="sec">
-    <div class="wrap">
-      <div class="note-box">
-        <p class="eyebrow">{{ entreprise.encart.eyebrow }}</p>
-        <h3>{{ entreprise.encart.title }}</h3>
-        <p>{{ entreprise.encart.text | safe }}</p>
-      </div>
-    </div>
-  </section>
-
   <!-- CTA -->
-  <section class="cta-band">
+  <section class="cta-band cta-band--light">
     <div class="wrap">
       <h2>{{ entreprise.cta.title }}</h2>
       <p>{{ entreprise.cta.text | safe }}</p>

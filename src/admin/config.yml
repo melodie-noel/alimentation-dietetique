@@ -56,8 +56,8 @@ collections:
             fields:
               - { label: "Surtitre", name: eyebrow, widget: string }
               - { label: "Titre", name: title, widget: string }
-              - { label: "Introduction", name: intro, widget: text }
-              - { label: "Slogan", name: slogan, widget: string }
+              - { label: "Introduction", name: intro, widget: text, hint: "Appuyez sur Entrée pour un retour à la ligne. *mot* = italique, **mot** = gras." }
+              - { label: "Slogan", name: slogan, widget: text, hint: "Phrase d'accroche placée avant les deux piliers." }
               - label: "Les deux piliers"
                 name: pills
                 widget: list
@@ -66,7 +66,6 @@ collections:
                   - { label: "Étiquette", name: tag, widget: string }
                   - { label: "Titre", name: title, widget: string }
                   - { label: "Texte", name: text, widget: text }
-              - { label: "Phrase de fin", name: line, widget: string }
               - { label: "Phrase d'accroche hypnose (mise en avant)", name: note, widget: string, required: false }
           - label: "Section « Pourquoi venir me voir »"
             name: raisons
@@ -102,8 +101,18 @@ collections:
               - { label: "Surtitre", name: eyebrow, widget: string }
               - { label: "Titre", name: title, widget: string }
               - { label: "Phrase", name: intro, widget: text }
-              - { label: "Points", name: points, widget: list, field: { label: "Point", name: point, widget: string } }
+              - { label: "Points", name: points, widget: list, field: { label: "Point", name: point, widget: text }, hint: "Appuyez sur Entrée à l'intérieur d'un point pour le couper en deux lignes (ex. mettre la parenthèse en dessous)." }
               - { label: "Libellé du bouton", name: ctaLabel, widget: string }
+          - label: "Section « Témoignages »"
+            name: temoignages
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Note Google (ex. 4,9)", name: note, widget: string }
+              - { label: "Nombre d'avis", name: count, widget: string }
+              - { label: "Lien vers les avis Google", name: url, widget: string, hint: "Collez ici le lien « Voir les avis » de votre fiche Google (Google Business). À mettre à jour si la note évolue." }
+              - { label: "Libellé du lien", name: linkLabel, widget: string }
           - label: "Bloc « Premier rendez-vous »"
             name: cta
             widget: object
@@ -208,13 +217,6 @@ collections:
                       - { label: "Doré", value: "gold" }
                       - { label: "Terracotta", value: "terra" }
                       - { label: "Anthracite", value: "ink" }
-          - label: "Encart « séance individuelle »"
-            name: encart
-            widget: object
-            fields:
-              - { label: "Surtitre", name: eyebrow, widget: string }
-              - { label: "Titre", name: title, widget: string }
-              - { label: "Texte", name: text, widget: text }
           - label: "Bloc de contact (bas de page)"
             name: cta
             widget: object
@@ -257,6 +259,21 @@ collections:
               - { label: "Carte 2 — texte", name: card2Text, widget: text }
               - { label: "Libellé du bouton", name: ctaLabel, widget: string }
               - { label: "Lien du bouton", name: ctaHref, widget: string }
+          - label: "Section « Pour qui ? Pour quoi ? »"
+            name: pourqui
+            widget: object
+            fields:
+              - { label: "Surtitre (noir)", name: eyebrow, widget: string }
+              - { label: "Titre (vert)", name: title, widget: string }
+              - { label: "Introduction", name: lead, widget: text }
+              - label: "Populations (carte + mots-clés)"
+                name: groups
+                widget: list
+                hint: "L'icône est associée au nom de la population (Enfants, Adolescents, Adultes, Séniors, Femmes enceintes, Sportifs)."
+                fields:
+                  - { label: "Population", name: nom, widget: string }
+                  - { label: "Précision d'âge (facultatif)", name: age, widget: string, required: false }
+                  - { label: "Mots-clés (exemples)", name: mots, widget: list, field: { label: "Mot-clé", name: mot, widget: string } }
           - label: "Section « Hypnose »"
             name: hypnose
             widget: object
@@ -289,6 +306,7 @@ collections:
               - { label: "Titre", name: title, widget: string }
               - { label: "Idées reçues (sans les guillemets)", name: myths, widget: list, field: { label: "Idée reçue", name: myth, widget: string } }
               - { label: "Phrase de conclusion", name: note, widget: text }
+              - { label: "Phrase manuscrite (mise en avant)", name: experiment, widget: text, hint: "Affichée en grand, en écriture manuscrite, sous les deux colonnes." }
           - label: "Section « Déroulé d'une séance »"
             name: deroule
             widget: object
