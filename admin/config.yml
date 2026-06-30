@@ -1,0 +1,364 @@
+# --- DecapBridge (PKCE) ---
+backend:
+  name: git-gateway
+  repo: aderazey/melodie-noel
+  branch: preprod
+  auth_type: pkce
+  base_url: https://auth.decapbridge.com
+  auth_endpoint: /sites/195a58bc-fe46-462c-903f-3be9e7eb38fe/pkce
+  auth_token_endpoint: /sites/195a58bc-fe46-462c-903f-3be9e7eb38fe/token
+  gateway_url: https://gateway.decapbridge.com
+
+  commit_messages:
+    create: 'Create {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge'
+    update: 'Update {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge'
+    delete: 'Delete {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge'
+    uploadMedia: 'Upload "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge'
+    deleteMedia: 'Delete "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge'
+    openAuthoring: 'Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge'
+
+# Prévisualisation avant publication (brouillons + deploy preview)
+publish_mode: editorial_workflow
+
+auth:
+  email_claim: email
+  first_name_claim: first_name
+  last_name_claim: last_name
+  avatar_url_claim: avatar_url
+
+logo_url: https://decapbridge.com/decapcms-with-bridge.svg
+site_url: https://preprod--melodie-noel.netlify.app
+
+locale: fr
+media_folder: "src/assets/img"
+public_folder: "/assets/img"
+
+collections:
+  - name: pages
+    label: Pages du site
+    files:
+      - name: home
+        label: Accueil
+        file: src/_data/home.json
+        format: json
+        fields:
+          - label: "Hero (haut de page)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string, hint: "Vous pouvez garder <br> et <span class=\"hand\">…</span> pour le style manuscrit." }
+              - { label: "Sous-titre", name: subtitle, widget: text, hint: "Conservez les <span class=\"kw\">…</span> pour les mots en couleur." }
+              - { label: "Libellé du bouton", name: ctaLabel, widget: string }
+          - label: "Section « Mon approche »"
+            name: approche
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Introduction", name: intro, widget: text, hint: "Appuyez sur Entrée pour un retour à la ligne. *mot* = italique, **mot** = gras." }
+              - { label: "Slogan", name: slogan, widget: text, hint: "Phrase d'accroche placée avant les deux piliers." }
+              - label: "Les deux piliers"
+                name: pills
+                widget: list
+                max: 2
+                fields:
+                  - { label: "Étiquette", name: tag, widget: string }
+                  - { label: "Titre", name: title, widget: string }
+                  - { label: "Texte", name: text, widget: text }
+              - { label: "Phrase d'accroche hypnose (mise en avant)", name: note, widget: string, required: false }
+          - label: "Section « Pourquoi venir me voir »"
+            name: raisons
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Introduction", name: intro, widget: text }
+              - label: "Motifs de consultation (icône fixe)"
+                name: items
+                widget: list
+                max: 6
+                fields:
+                  - { label: "Titre", name: title, widget: string }
+                  - { label: "Texte", name: text, widget: text }
+          - label: "Section « Comment on travaille ensemble »"
+            name: accompagnements
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - label: "Cartes (ajout / suppression / réordonnancement libres)"
+                name: cards
+                widget: list
+                fields:
+                  - { label: "Titre", name: title, widget: string }
+                  - { label: "Texte", name: text, widget: text }
+              - { label: "Libellé du bouton", name: ctaLabel, widget: string }
+          - label: "Section « En entreprise »"
+            name: entreprise
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Phrase", name: intro, widget: text }
+              - { label: "Points", name: points, widget: list, field: { label: "Point", name: point, widget: text }, hint: "Appuyez sur Entrée à l'intérieur d'un point pour le couper en deux lignes (ex. mettre la parenthèse en dessous)." }
+              - { label: "Libellé du bouton", name: ctaLabel, widget: string }
+          - label: "Section « Témoignages »"
+            name: temoignages
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Note Google (ex. 4,9)", name: note, widget: string }
+              - { label: "Nombre d'avis", name: count, widget: string }
+              - { label: "Lien vers les avis Google", name: url, widget: string, hint: "Collez ici le lien « Voir les avis » de votre fiche Google (Google Business). À mettre à jour si la note évolue." }
+              - { label: "Libellé du lien", name: linkLabel, widget: string }
+          - label: "Bloc « Premier rendez-vous »"
+            name: cta
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Texte", name: text, widget: text }
+              - { label: "Phrase d'élan", name: elan, widget: string, required: false }
+              - { label: "Libellé du bouton", name: ctaLabel, widget: string }
+              - { label: "Infos pratiques", name: meta, widget: string }
+      - name: entreprise
+        label: Page Entreprise
+        file: src/_data/entreprise.json
+        format: json
+        fields:
+          - label: "Héro (haut de page)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string, hint: "Conservez <span class=\"hand\">…</span> pour le mot manuscrit." }
+              - { label: "Accroche", name: lead, widget: text }
+          - label: "Promesses (blocs avec icône)"
+            name: promesses
+            widget: list
+            fields:
+              - { label: "Icône", name: icon, widget: image, hint: "Icône carrée, SVG ou PNG à fond transparent, ~64×64 px, tracé simple (vert #4E9D3F de préférence)." }
+              - { label: "Texte", name: text, widget: string }
+          - label: "Section « Pourquoi me faire intervenir »"
+            name: benefices
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Bénéfices", name: items, widget: list, field: { label: "Bénéfice", name: item, widget: string } }
+          - label: "Section « Les maux »"
+            name: maux
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Introduction", name: lead, widget: text }
+              - label: "Bulles (ajout / suppression libres)"
+                name: bubbles
+                widget: list
+                fields:
+                  - { label: "Texte", name: texte, widget: string }
+                  - label: "Couleur"
+                    name: couleur
+                    widget: select
+                    default: "vert"
+                    options:
+                      - { label: "Vert", value: "vert" }
+                      - { label: "Corail", value: "corail" }
+                      - { label: "Doré", value: "gold" }
+                      - { label: "Terracotta", value: "terra" }
+                      - { label: "Anthracite", value: "ink" }
+          - label: "Section « Trois formats »"
+            name: formats
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - label: "Formats"
+                name: cards
+                widget: list
+                fields:
+                  - { label: "Icône", name: icon, widget: image, hint: "Icône carrée, SVG ou PNG à fond transparent, ~64×64 px, tracé simple (vert #4E9D3F de préférence)." }
+                  - { label: "Titre", name: title, widget: string }
+                  - { label: "Texte", name: text, widget: text }
+          - label: "Section « Références clients »"
+            name: references
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - label: "Clients"
+                name: refs
+                widget: list
+                fields:
+                  - { label: "Nom du client", name: nom, widget: string }
+                  - { label: "Interventions", name: lignes, widget: list, field: { label: "Ligne", name: ligne, widget: string } }
+          - label: "Section « Idées de sujet »"
+            name: themes
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Introduction", name: lead, widget: string, hint: "Le <strong>…</strong> met en gras." }
+              - label: "Thèmes (ajout / suppression libres)"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Texte", name: texte, widget: string }
+                  - label: "Couleur"
+                    name: couleur
+                    widget: select
+                    default: "vert"
+                    options:
+                      - { label: "Vert", value: "vert" }
+                      - { label: "Corail", value: "corail" }
+                      - { label: "Doré", value: "gold" }
+                      - { label: "Terracotta", value: "terra" }
+                      - { label: "Anthracite", value: "ink" }
+          - label: "Bloc de contact (bas de page)"
+            name: cta
+            widget: object
+            fields:
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Texte", name: text, widget: text }
+              - { label: "Libellé bouton « contact »", name: btnContact, widget: string }
+              - { label: "Libellé bouton « plaquette »", name: btnPlaquette, widget: string }
+              - label: "Plaquette à télécharger (PDF)"
+                name: flyer
+                widget: file
+                required: false
+                media_folder: "/src/assets/flyers"
+                public_folder: "/assets/flyers"
+                hint: "Téléversez ici la plaquette PDF à jour (couleurs actualisées) ; elle remplacera l'actuelle."
+      - name: accompagnements
+        label: Page Accompagnements
+        file: src/_data/accompagnements.json
+        format: json
+        fields:
+          - label: "Héro (haut de page)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre — début", name: titleBefore, widget: string }
+              - { label: "Titre — mot manuscrit", name: titleHand, widget: string }
+              - { label: "Titre — fin", name: titleAfter, widget: string }
+              - { label: "Accroche", name: lead, widget: text }
+          - label: "Section « Les séances diététique »"
+            name: dietetique
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Accroche", name: lead, widget: text }
+              - { label: "Carte 1 — titre", name: card1Title, widget: string }
+              - { label: "Carte 1 — sous-titre", name: card1Sub, widget: string }
+              - { label: "Carte 1 — lignes de mots-clés", name: card1Lines, widget: list, field: { label: "Ligne", name: line, widget: string }, hint: "Une idée par ligne. Séparez les mots-clés d'une même ligne par « · »." }
+              - { label: "Carte 2 — titre", name: card2Title, widget: string }
+              - { label: "Carte 2 — sous-titre", name: card2Sub, widget: string }
+              - { label: "Carte 2 — lignes de mots-clés", name: card2Lines, widget: list, field: { label: "Ligne", name: line, widget: string }, hint: "Une idée par ligne. Séparez les mots-clés d'une même ligne par « · »." }
+              - label: "Zoom « L'impédancemètre »"
+                name: impedance
+                widget: object
+                fields:
+                  - { label: "Surtitre", name: eyebrow, widget: string }
+                  - { label: "Titre", name: title, widget: string }
+                  - { label: "Lignes de mots-clés", name: lines, widget: list, field: { label: "Ligne", name: line, widget: string } }
+                  - { label: "Phrase mise en avant (manuscrite)", name: reassureStrong, widget: string, hint: "Ex. « La pesée n'est JAMAIS obligatoire ! »" }
+                  - { label: "Phrase de rassurance (sous la précédente)", name: reassureText, widget: text }
+                  - { label: "Image miniature (courbe de suivi)", name: chartThumb, widget: string, hint: "Chemin de l'image, ex. assets/img/suivi-impedance.webp" }
+                  - { label: "Image en grand (lightbox)", name: chartFull, widget: string, hint: "Souvent la même que la miniature." }
+                  - { label: "Libellé du bouton « voir l'exemple »", name: chartLabel, widget: string }
+                  - { label: "Légende de l'image", name: chartCaption, widget: string }
+            name: pourqui
+            widget: object
+            fields:
+              - { label: "Surtitre (noir)", name: eyebrow, widget: string }
+              - { label: "Titre (vert)", name: title, widget: string }
+              - { label: "Introduction", name: lead, widget: text }
+              - label: "Populations (carte + mots-clés)"
+                name: groups
+                widget: list
+                hint: "L'icône est associée au nom de la population (Enfants, Adolescents, Adultes, Séniors, Femmes enceintes, Sportifs)."
+                fields:
+                  - { label: "Population", name: nom, widget: string }
+                  - { label: "Précision d'âge (facultatif)", name: age, widget: string, required: false }
+                  - { label: "Mots-clés (exemples)", name: mots, widget: list, field: { label: "Mot-clé", name: mot, widget: string } }
+          - label: "Section « Hypnose »"
+            name: hypnose
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Accroche", name: lead, widget: text }
+              - { label: "Phrase d'introduction", name: intro, widget: text }
+              - label: "Thématiques (liste)"
+                name: items
+                widget: list
+                fields:
+                  - { label: "En gras", name: strong, widget: string }
+                  - { label: "Suite de la phrase", name: text, widget: string }
+              - { label: "Libellé du bouton", name: ctaLabel, widget: string }
+              - { label: "Lien du bouton", name: ctaHref, widget: string }
+              - { label: "Citation", name: quote, widget: text }
+              - { label: "Signature de la citation", name: quoteCite, widget: string }
+          - label: "Bande « à chacun sa façon »"
+            name: band
+            widget: object
+            fields:
+              - { label: "Début de phrase", name: textBefore, widget: string }
+              - { label: "Fin manuscrite", name: textHand, widget: string }
+          - label: "Section « Stop aux idées reçues »"
+            name: idees
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Idées reçues (sans les guillemets)", name: myths, widget: list, field: { label: "Idée reçue", name: myth, widget: string } }
+              - { label: "Phrase de conclusion", name: note, widget: text }
+              - { label: "Phrase manuscrite (mise en avant)", name: experiment, widget: text, hint: "Affichée en grand, en écriture manuscrite, sous les deux colonnes." }
+          - label: "Section « Déroulé d'une séance »"
+            name: deroule
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Texte", name: text, widget: text }
+          - label: "Section « Mon approche »"
+            name: approche
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Carte 1 — titre", name: card1Title, widget: string }
+              - { label: "Carte 1 — texte", name: card1Text, widget: text }
+              - { label: "Carte 2 — titre", name: card2Title, widget: string }
+              - { label: "Carte 2 — texte", name: card2Text, widget: text }
+              - { label: "Carte 3 — titre", name: card3Title, widget: string }
+              - { label: "Carte 3 — texte", name: card3Text, widget: text }
+          - label: "Section « Tarifs »"
+            name: tarifs
+            widget: object
+            fields:
+              - { label: "Surtitre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Accroche", name: lead, widget: text }
+              - label: "Lignes du tableau"
+                name: rows
+                widget: list
+                fields:
+                  - { label: "Prestation", name: nom, widget: string }
+                  - { label: "Description / détail (sous le nom)", name: precision, widget: string, required: false, hint: "Affiché en petit sous le nom de la séance. Ex. « 1er rendez-vous, ou reprise après 6 mois sans suivi »" }
+                  - { label: "Durée", name: duree, widget: string }
+                  - { label: "Tarif (chiffre seul, sans €)", name: prix, widget: string }
+              - { label: "Note (bas du tableau)", name: note, widget: text }
+          - label: "Bloc final « Et si on en parlait ? »"
+            name: cta
+            widget: object
+            fields:
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Texte", name: text, widget: text }
+              - { label: "Libellé du bouton", name: ctaLabel, widget: string }
+              - { label: "Lien du bouton", name: ctaHref, widget: string }
