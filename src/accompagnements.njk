@@ -46,52 +46,78 @@ ogDescription: "Manger avec plaisir, vivre en équilibre. Un accompagnement sur 
           <p>{{ accompagnements.approche.card3Text }}</p>
         </article>
       </div>
-      <div class="deroule">
-        <div class="deroule-head">
-          <span class="spec-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B85420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg></span>
-          <div class="deroule-ttl"><h3 class="se-title">{{ accompagnements.deroule.title }}</h3></div>
-        </div>
-        <p>{{ accompagnements.deroule.text }}</p>
-      </div>
     </div>
   </section>
 
   <!-- 2 · MES SPÉCIALITÉS (regroupe diététique + hypnose) -->
   <section class="sec alt" id="specialites">
     <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">{{ accompagnements.specialites.eyebrow }}</p>
-        <h2>{{ accompagnements.specialites.title }}</h2>
-        <p class="lead">{{ accompagnements.specialites.intro }}</p>
+      <div class="spec-panel spec-panel--intro">
+        <div class="sec-head sec-head--center">
+          <p class="eyebrow">{{ accompagnements.specialites.eyebrow }}</p>
+          <h2>{{ accompagnements.specialites.title }}</h2>
+          <p class="lead">{{ accompagnements.specialites.intro }}</p>
+        </div>
       </div>
 
-      <!-- a) La diététique -->
-      <div class="spec-block" id="dietetique">
+      <!-- a) Le pilier : la diététique -->
+      <div class="spec-panel spec-tool" id="dietetique">
         <div class="spec-label">
-          <span class="spec-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B85420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4.5h6V7H9z"/><path d="M9 11.5h6M9 15h4"/></svg></span>
-          <span class="spec-name">La diététique</span>
+          <span class="spec-no spec-no--diet" aria-hidden="true">1</span>
+          <span class="spec-name">Le pilier&nbsp;: la diététique</span>
         </div>
         <h3 class="spec-title">{{ accompagnements.dietetique.title }}</h3>
         <p class="lead" style="max-width:54em">{{ accompagnements.dietetique.lead }}</p>
-        <div class="duo" style="margin-top:28px">
-          <article class="approach-card">
-            <span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4E9D3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4.5h6V7H9z"/><path d="M9 11.5h6M9 15h4"/></svg></span>
-            <h3>{{ accompagnements.dietetique.card1Title }}</h3>
-            <p>{{ accompagnements.dietetique.card1Text }}</p>
+
+        <div class="diet-duo">
+          <article class="diet-card">
+            <div class="diet-thumb" aria-hidden="true"><img src="assets/img/diet-bilan.webp" alt="" width="731" height="950" loading="lazy"></div>
+            <div class="diet-card-head">
+              <span class="diet-num" aria-hidden="true">1</span>
+              <div><h3 class="diet-card-ttl">{{ accompagnements.dietetique.card1Title }}</h3><p class="diet-card-sub">{{ accompagnements.dietetique.card1Sub }}</p></div>
+            </div>
+            <ul class="diet-kw">
+{% for l in accompagnements.dietetique.card1Lines %}              <li>{{ l }}</li>
+{% endfor %}            </ul>
           </article>
-          <article class="approach-card">
-            <span class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4E9D3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16"/><path d="M7 19v-4M12 19v-7M17 19v-11"/><path d="M15 8l2-2 2 2"/></svg></span>
-            <h3>{{ accompagnements.dietetique.card2Title }}</h3>
-            <p>{{ accompagnements.dietetique.card2Text }}</p>
+          <article class="diet-card">
+            <div class="diet-thumb" aria-hidden="true"><img src="assets/img/diet-suivi.webp" alt="" width="745" height="903" loading="lazy"></div>
+            <div class="diet-card-head">
+              <span class="diet-num" aria-hidden="true">2</span>
+              <div><h3 class="diet-card-ttl">{{ accompagnements.dietetique.card2Title }}</h3><p class="diet-card-sub">{{ accompagnements.dietetique.card2Sub }}</p></div>
+            </div>
+            <ul class="diet-kw">
+{% for l in accompagnements.dietetique.card2Lines %}              <li>{{ l }}</li>
+{% endfor %}            </ul>
           </article>
         </div>
-        <div class="sec-cta"><a class="btn btn-dark" href="{{ accompagnements.dietetique.ctaHref }}">{{ accompagnements.dietetique.ctaLabel }}</a></div>
+
+        <!-- Zoom : l'impédancemètre -->
+        {% set imp = accompagnements.dietetique.impedance %}
+        <div class="imped">
+          <div class="imped-main">
+            <h3 class="se-title imped-ttl"><span class="imped-kick">{{ imp.eyebrow }}</span>{{ imp.title }}</h3>
+            <ul class="imped-kw">
+{% for l in imp.lines %}              <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" stroke="#4E9D3F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>{{ l }}</span></li>
+{% endfor %}            </ul>
+            <button type="button" class="imped-thumb" data-lightbox="{{ imp.chartFull }}" data-caption="{{ imp.chartCaption }}" aria-label="{{ imp.chartLabel }} (agrandir l'image)">
+              <img src="{{ imp.chartThumb }}" alt="{{ imp.chartCaption }}" width="1800" height="1273" loading="lazy">
+              <span class="imped-thumb-tag"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M16 16l4 4M11 8v6M8 11h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>{{ imp.chartLabel }}</span>
+            </button>
+          </div>
+          <aside class="imped-reassure">
+            <p class="imped-reassure-strong"><span class="hand">{{ imp.reassureStrong }}</span></p>
+            <p class="imped-reassure-text">{{ imp.reassureText }}</p>
+          </aside>
+        </div>
+
+        <div class="sec-cta"><a class="btn btn-dark" href="{{ accompagnements.dietetique.ctaHref }}" target="_blank" rel="noopener">{{ accompagnements.dietetique.ctaLabel }}</a></div>
       </div>
 
-      <!-- b) L'hypnose -->
-      <div class="spec-block" id="hypnose">
+      <!-- b) L'ingrédient secret : l'hypnose -->
+      <div class="spec-panel spec-tool" id="hypnose">
         <div class="spec-label">
-          <span class="spec-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B85420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.6L18.5 9l-3.6 3 1.1 4.8L12 14.7 8 16.8 9.1 12 5.5 9l4.6-1.4z"/></svg></span>
+          <span class="spec-no spec-no--hyp" aria-hidden="true">2</span>
           <span class="spec-name">{{ accompagnements.hypnose.eyebrow }}</span>
         </div>
         <h3 class="spec-title">{{ accompagnements.hypnose.title }}</h3>
@@ -101,10 +127,26 @@ ogDescription: "Manger avec plaisir, vivre en équilibre. Un accompagnement sur 
 {% for it in accompagnements.hypnose.items %}          <li><span class="th"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" stroke="#4E9D3F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>{{ it.strong }}</strong></span><em>{{ it.text }}</em></li>
 {% endfor %}        </ul>
 
-        <figure class="pullquote">
-          <p>« {{ accompagnements.hypnose.quote }} »</p>
-          <figcaption>{{ accompagnements.hypnose.quoteCite }}</figcaption>
-        </figure>
+        <div class="hyp-quote-row">
+          <figure class="pullquote">
+            <p>« {{ accompagnements.hypnose.quote }} »</p>
+            <figcaption>{{ accompagnements.hypnose.quoteCite }}</figcaption>
+          </figure>
+
+          <div class="deroule deroule--hyp">
+            <div class="deroule-head">
+              <span class="spec-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B85420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg></span>
+              <div class="deroule-ttl"><h3 class="se-title">Le déroulé d'une séance</h3><p class="deroule-sub">45&nbsp;min à 1&nbsp;h, simplement assis·e au cabinet.</p></div>
+            </div>
+            <ul class="deroule-steps">
+              <li>Un échange</li>
+              <li>De l'écoute</li>
+              <li>Un objectif</li>
+              <li>Un protocole</li>
+              <li>Un temps de travail intérieur</li>
+            </ul>
+          </div>
+        </div>
 
         <!-- idées reçues : propre à l'hypnose -->
         <div class="myths-block">
@@ -116,7 +158,7 @@ ogDescription: "Manger avec plaisir, vivre en équilibre. Un accompagnement sur 
         </div>
 
         <p class="experiment-line">{{ accompagnements.idees.experiment }}</p>
-        <div class="sec-cta"><a class="btn btn-dark" href="{{ accompagnements.hypnose.ctaHref }}">{{ accompagnements.hypnose.ctaLabel }}</a></div>
+        <div class="sec-cta"><a class="btn btn-dark" href="{{ accompagnements.hypnose.ctaHref }}" target="_blank" rel="noopener">{{ accompagnements.hypnose.ctaLabel }}</a></div>
       </div>
     </div>
   </section>
@@ -157,7 +199,7 @@ ogDescription: "Manger avec plaisir, vivre en équilibre. Un accompagnement sur 
       <table class="tarif-table">
         <thead><tr><th scope="col">Prestation</th><th scope="col">Durée</th><th scope="col" class="r">Tarif</th></tr></thead>
         <tbody>
-{% for r in accompagnements.tarifs.rows %}          <tr><td class="nm">{{ r.nom }}</td><td>{{ r.duree }}</td><td class="pr">{{ r.prix }}&nbsp;€</td></tr>
+{% for r in accompagnements.tarifs.rows %}          <tr><td class="nm"><span class="nm-main">{{ r.nom }}</span>{% if r.precision %}<span class="nm-sub">{{ r.precision }}</span>{% endif %}</td><td>{{ r.duree }}</td><td class="pr">{{ r.prix }}&nbsp;€</td></tr>
 {% endfor %}        </tbody>
       </table>
       <p class="tarif-note">{{ accompagnements.tarifs.note }}</p>

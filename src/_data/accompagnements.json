@@ -11,11 +11,41 @@
     "title": "Un suivi nutritionnel concret, à votre rythme",
     "lead": "Pour la gestion du poids comme pour mieux vivre avec une pathologie (diabète, cholestérol, troubles digestifs…), on construit ensemble une démarche réaliste — sans régime ni privation.",
     "card1Title": "Le bilan",
-    "card1Text": "Tout commence par un bilan complet : votre histoire, vos habitudes, votre mode de vie et vos objectifs. Ce premier temps me permet de comprendre votre situation dans sa globalité et de poser, ensemble, des bases saines et tenables.",
+    "card1Sub": "On pose les bases, ensemble.",
+    "card1Lines": [
+      "Votre histoire · Vos habitudes · Votre quotidien · Vos objectifs",
+      "Une évaluation précise de vos besoins",
+      "Une pesée détaillée (impédancemètre : gras · muscle · eau)",
+      "Un programme sur mesure · Un rythme alimentaire · Des portions repères",
+      "Des bases saines · De la simplicité · De la durabilité"
+    ],
     "card2Title": "Les suivis",
-    "card2Text": "On avance ensuite pas à pas, avec des rendez-vous réguliers pour ajuster, encourager et ancrer durablement les changements. Des conseils simples, applicables dès le lendemain, qui respectent vos goûts et votre quotidien.",
+    "card2Sub": "On avance pas à pas, à votre rythme.",
+    "card2Lines": [
+      "Votre retour · Vos questions · Votre progression · Votre rythme",
+      "Des conseils · Des astuces · Des menus · De la régularité",
+      "Une adaptation personnalisée du programme",
+      "Un suivi précis des mesures corporelles (impédancemètre)",
+      "De la satisfaction · Des solutions concrètes · Des encouragements"
+    ],
+    "impedance": {
+      "eyebrow": "Bon à savoir",
+      "title": "C'est quoi l'impédancemètre ?",
+      "lines": [
+        "Une balance précise",
+        "Des infos détaillées",
+        "Votre masse graisseuse, hydrique et musculaire",
+        "L'évolution de votre composition corporelle"
+      ],
+      "reassureStrong": "La pesée n'est JAMAIS obligatoire !",
+      "reassureText": "On avance toujours à votre rythme, avec ou sans chiffre sur la balance.",
+      "chartThumb": "assets/img/suivi-impedance.webp",
+      "chartFull": "assets/img/suivi-impedance.webp",
+      "chartLabel": "Voir un exemple de suivi",
+      "chartCaption": "Exemple de suivi de la composition corporelle à l'impédancemètre, sur plusieurs mois (données anonymisées)."
+    },
     "ctaLabel": "Prendre rendez-vous",
-    "ctaHref": "contact.html#formulaire"
+    "ctaHref": "https://www.doctolib.fr/dieteticien/maisons-alfort/melodie-noel"
   },
   "pourqui": {
     "eyebrow": "Pour qui · pour quoi",
@@ -112,7 +142,7 @@
       }
     ],
     "ctaLabel": "Prendre rendez-vous",
-    "ctaHref": "contact.html#formulaire",
+    "ctaHref": "https://www.doctolib.fr/dieteticien/maisons-alfort/melodie-noel",
     "quote": "Il suffit parfois d'un léger déclic, d'une nouvelle perspective, pour que tout commence à changer.",
     "quoteCite": "— Mélodie Noël"
   },
@@ -143,7 +173,7 @@
     "title": "Mon approche, à votre image",
     "card1Title": "Je prends le temps",
     "card1Text": "Un premier bilan approfondi pour cerner votre personnalité, vos habitudes, vos contraintes réelles. Pas de solution générique.",
-    "card2Title": "Je reste simple et concret",
+    "card2Title": "Je reste simple et concrète",
     "card2Text": "Des trucs & astuces applicables dès le lendemain, des conseils qui respectent vos goûts et votre mode de vie.",
     "card3Title": "Je reste disponible",
     "card3Text": "Une question entre deux séances ? Je réponds. L'accompagnement ne s'arrête pas à la porte du cabinet."
@@ -155,21 +185,25 @@
     "rows": [
       {
         "nom": "Bilan nutritionnel",
+        "precision": "1er rendez-vous, ou reprise après 6 mois sans suivi",
         "duree": "30 à 45 min",
         "prix": "70"
       },
       {
         "nom": "Séance de suivi",
+        "precision": "Suivi régulier, tous les 2 à 8 semaines",
         "duree": "15 à 30 min",
         "prix": "40"
       },
       {
         "nom": "Séance enfant",
+        "precision": "6 à 14 ans · Pas de tarif de suivi",
         "duree": "30 à 45 min",
         "prix": "70"
       },
       {
         "nom": "Séance hypnose",
+        "precision": "Adultes uniquement",
         "duree": "45 min à 1 h",
         "prix": "85"
       }

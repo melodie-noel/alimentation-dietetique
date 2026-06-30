@@ -32,3 +32,29 @@
     c.addEventListener('focusin',stop); c.addEventListener('focusout',start);
     go(0); start();
   });
+
+  // Lightbox : miniatures cliquables (ex. courbe de suivi impédancemètre)
+  (function(){
+    var triggers=[].slice.call(document.querySelectorAll('[data-lightbox]'));
+    if(!triggers.length) return;
+    var lb=document.createElement('div');
+    lb.className='lb'; lb.setAttribute('role','dialog'); lb.setAttribute('aria-modal','true'); lb.setAttribute('aria-label','Image agrandie');
+    lb.innerHTML='<button type="button" class="lb-close" aria-label="Fermer">\u00D7</button><figure class="lb-fig"><img class="lb-img" alt=""><figcaption class="lb-cap"></figcaption></figure>';
+    document.body.appendChild(lb);
+    var img=lb.querySelector('.lb-img'), cap=lb.querySelector('.lb-cap'), closeBtn=lb.querySelector('.lb-close');
+    var last=null;
+    function open(src,alt,caption,opener){
+      last=opener; img.src=src; img.alt=alt||''; cap.textContent=caption||'';
+      cap.style.display=caption?'':'none';
+      lb.classList.add('open'); document.body.style.overflow='hidden'; closeBtn.focus();
+    }
+    function close(){ lb.classList.remove('open'); document.body.style.overflow=''; img.src=''; if(last){last.focus();last=null;} }
+    triggers.forEach(function(t){
+      t.addEventListener('click',function(){
+        open(t.getAttribute('data-lightbox'), t.querySelector('img')?t.querySelector('img').alt:'', t.getAttribute('data-caption'), t);
+      });
+    });
+    closeBtn.addEventListener('click',close);
+    lb.addEventListener('click',function(e){ if(e.target===lb||e.target.classList.contains('lb-fig')) close(); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&lb.classList.contains('open')) close(); });
+  })();

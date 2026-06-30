@@ -254,12 +254,24 @@ collections:
               - { label: "Titre", name: title, widget: string }
               - { label: "Accroche", name: lead, widget: text }
               - { label: "Carte 1 — titre", name: card1Title, widget: string }
-              - { label: "Carte 1 — texte", name: card1Text, widget: text }
+              - { label: "Carte 1 — sous-titre", name: card1Sub, widget: string }
+              - { label: "Carte 1 — lignes de mots-clés", name: card1Lines, widget: list, field: { label: "Ligne", name: line, widget: string }, hint: "Une idée par ligne. Séparez les mots-clés d'une même ligne par « · »." }
               - { label: "Carte 2 — titre", name: card2Title, widget: string }
-              - { label: "Carte 2 — texte", name: card2Text, widget: text }
-              - { label: "Libellé du bouton", name: ctaLabel, widget: string }
-              - { label: "Lien du bouton", name: ctaHref, widget: string }
-          - label: "Section « Pour qui ? Pour quoi ? »"
+              - { label: "Carte 2 — sous-titre", name: card2Sub, widget: string }
+              - { label: "Carte 2 — lignes de mots-clés", name: card2Lines, widget: list, field: { label: "Ligne", name: line, widget: string }, hint: "Une idée par ligne. Séparez les mots-clés d'une même ligne par « · »." }
+              - label: "Zoom « L'impédancemètre »"
+                name: impedance
+                widget: object
+                fields:
+                  - { label: "Surtitre", name: eyebrow, widget: string }
+                  - { label: "Titre", name: title, widget: string }
+                  - { label: "Lignes de mots-clés", name: lines, widget: list, field: { label: "Ligne", name: line, widget: string } }
+                  - { label: "Phrase mise en avant (manuscrite)", name: reassureStrong, widget: string, hint: "Ex. « La pesée n'est JAMAIS obligatoire ! »" }
+                  - { label: "Phrase de rassurance (sous la précédente)", name: reassureText, widget: text }
+                  - { label: "Image miniature (courbe de suivi)", name: chartThumb, widget: string, hint: "Chemin de l'image, ex. assets/img/suivi-impedance.webp" }
+                  - { label: "Image en grand (lightbox)", name: chartFull, widget: string, hint: "Souvent la même que la miniature." }
+                  - { label: "Libellé du bouton « voir l'exemple »", name: chartLabel, widget: string }
+                  - { label: "Légende de l'image", name: chartCaption, widget: string }
             name: pourqui
             widget: object
             fields:
@@ -338,6 +350,7 @@ collections:
                 widget: list
                 fields:
                   - { label: "Prestation", name: nom, widget: string }
+                  - { label: "Description / détail (sous le nom)", name: precision, widget: string, required: false, hint: "Affiché en petit sous le nom de la séance. Ex. « 1er rendez-vous, ou reprise après 6 mois sans suivi »" }
                   - { label: "Durée", name: duree, widget: string }
                   - { label: "Tarif (chiffre seul, sans €)", name: prix, widget: string }
               - { label: "Note (bas du tableau)", name: note, widget: text }
