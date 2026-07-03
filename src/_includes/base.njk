@@ -48,6 +48,16 @@
 
 {{ content | safe }}
 
+<!-- Formulaire fantôme : détecté par Netlify au build pour enregistrer le formulaire "contact".
+     Invisible pour les visiteurs. Le vrai formulaire (page Contact) envoie ensuite en AJAX. -->
+<form name="contact" netlify netlify-honeypot="bot-field" hidden aria-hidden="true">
+  <input type="text" name="nom">
+  <input type="email" name="email">
+  <input type="tel" name="telephone">
+  <textarea name="message"></textarea>
+  <input name="bot-field">
+</form>
+
 <footer>
   <div class="wrap">
     <div class="foot">
