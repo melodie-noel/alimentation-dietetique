@@ -677,3 +677,5 @@ h2{font-size:clamp(1.5rem,2.25vw,1.78rem)}
   .stats .it{min-width:0}
   .stats .n,.stats .l{overflow-wrap:anywhere}
 }
+
+.form-ok{margin-top:18px;padding:14px 18px;border-radius:14px;background:#EAF4E7;border:1px solid #4E9D3F;color:#2F6A26;font-weight:600}

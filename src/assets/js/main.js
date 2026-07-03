@@ -58,3 +58,17 @@
     lb.addEventListener('click',function(e){ if(e.target===lb||e.target.classList.contains('lb-fig')) close(); });
     document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&lb.classList.contains('open')) close(); });
   })();
+
+// Confirmation après envoi du formulaire de contact (Netlify Forms redirige vers ?envoye=1)
+(function(){
+  var ok = document.getElementById('form-ok');
+  if(!ok) return;
+  if(new URLSearchParams(window.location.search).get('envoye') === '1'){
+    ok.hidden = false;
+    ok.focus();
+    ok.scrollIntoView({behavior:'smooth', block:'center'});
+    if(window.history.replaceState){
+      window.history.replaceState(null, '', window.location.pathname);
+    }
+  }
+})();

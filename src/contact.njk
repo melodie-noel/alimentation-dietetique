@@ -46,7 +46,7 @@ ogDescription: "Prenez rendez-vous au cabinet de Maisons-Alfort, par téléphone
     <div class="wrap">
       <div class="sec-head"><p class="eyebrow">Un message</p><h2>Une question avant de réserver ?</h2></div>
       <p class="lead" style="margin-bottom:22px">Écrivez-moi en quelques lignes, je vous réponds rapidement. Pour réserver directement un créneau, passez plutôt par Doctolib.</p>
-      <form class="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <form class="form" name="contact" method="POST" action="/contact.html?envoye=1" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="contact">
         <p hidden><label>Ne pas remplir : <input name="bot-field"></label></p>
         <div class="row">
@@ -57,6 +57,7 @@ ogDescription: "Prenez rendez-vous au cabinet de Maisons-Alfort, par téléphone
         <div><label for="f-msg">Votre message</label><textarea id="f-msg" name="message" required></textarea></div>
         <button class="btn btn-dark" type="submit">Envoyer le message</button>
       </form>
+      <p class="form-ok" id="form-ok" role="status" tabindex="-1" hidden>Merci, votre message a bien été envoyé. Je vous réponds au plus vite.</p>
       <div class="rdv-note rdv-note--lg" style="margin-top:26px">
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
           <rect x="6" y="9" width="36" height="33" rx="5" fill="#FFFBF2" stroke="#B85420" stroke-width="2"/>
