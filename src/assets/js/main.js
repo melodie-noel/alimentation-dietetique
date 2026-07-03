@@ -59,16 +59,31 @@
     document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&lb.classList.contains('open')) close(); });
   })();
 
-// Confirmation après envoi du formulaire de contact (Netlify Forms redirige vers ?envoye=1)
+// Envoi du formulaire de contact en AJAX vers Netlify Forms (POST vers "/"),
+// puis affichage d'un message de confirmation sans quitter la page (pas de 404).
 (function(){
+  var form = document.querySelector('form[name="contact"]');
   var ok = document.getElementById('form-ok');
-  if(!ok) return;
-  if(new URLSearchParams(window.location.search).get('envoye') === '1'){
-    ok.hidden = false;
-    ok.focus();
-    ok.scrollIntoView({behavior:'smooth', block:'center'});
-    if(window.history.replaceState){
-      window.history.replaceState(null, '', window.location.pathname);
-    }
-  }
+  if(!form || !ok) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var btn = form.querySelector('button[type="submit"]');
+    if(btn){ btn.disabled = true; btn.textContent = 'Envoi…'; }
+    var body = new URLSearchParams(new FormData(form)).toString();
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body
+    }).then(function(res){
+      if(!res.ok) throw new Error('HTTP ' + res.status);
+      form.reset();
+      ok.hidden = false;
+      ok.focus();
+      ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if(btn){ btn.disabled = false; btn.textContent = 'Envoyer le message'; }
+    }).catch(function(){
+      if(btn){ btn.disabled = false; btn.textContent = 'Envoyer le message'; }
+      alert("Une erreur s'est produite lors de l'envoi. Merci de réessayer, ou de m'écrire directement à mnoel.diet@gmail.com.");
+    });
+  });
 })();
