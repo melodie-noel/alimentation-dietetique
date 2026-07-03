@@ -281,7 +281,7 @@ collections:
               - label: "Populations (carte + mots-clés)"
                 name: groups
                 widget: list
-                hint: "L'icône est associée au nom de la population (Enfants, Adolescents, Adultes, Séniors, Femmes enceintes, Sportifs)."
+                hint: "L'icône est associée au nom de la population (Enfants, Adolescents, Adultes, Seniors, Femmes enceintes, Sportifs)."
                 fields:
                   - { label: "Population", name: nom, widget: string }
                   - { label: "Précision d'âge (facultatif)", name: age, widget: string, required: false }

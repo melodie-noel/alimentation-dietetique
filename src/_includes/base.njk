@@ -7,7 +7,9 @@
 <title>{{ title }}</title>
 <meta name="description" content="{{ description }}">
 <meta name="theme-color" content="{{ themeColor }}">
-{% if robots %}<meta name="robots" content="{{ robots }}">
+<link rel="canonical" href="{{ site.prodUrl }}{{ page.url | replace('index.html', '') }}">
+{% if not site.isProd %}<meta name="robots" content="noindex, nofollow">
+{% elif robots %}<meta name="robots" content="{{ robots }}">
 {% endif %}{% if ogTitle %}<meta property="og:type" content="website">
 <meta property="og:title" content="{{ ogTitle }}">
 <meta property="og:description" content="{{ ogDescription }}">
@@ -17,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
 {% if jsonld %}{% raw %}<script type="application/ld+json">
-{"@context":"https://schema.org","@type":["LocalBusiness","Dietitian"],"name":"Mélodie Noël — Diététique & Hypnose","description":"Diététicienne-Nutritionniste et praticienne en hypnose à Maisons-Alfort.","telephone":"+33782404301","email":"mnoel.diet@gmail.com","address":{"@type":"PostalAddress","streetAddress":"22D rue Georges Gaumé","addressLocality":"Maisons-Alfort","postalCode":"94700","addressCountry":"FR"},"areaServed":"Maisons-Alfort","priceRange":"€€"}
+{"@context":"https://schema.org","@type":["LocalBusiness","Dietitian"],"name":"Mélodie Noël — Diététique & Hypnose","url":"https://www.alimentation-dietetique.com","description":"Diététicienne-Nutritionniste et praticienne en hypnose à Maisons-Alfort.","telephone":"+33782404301","email":"mnoel.diet@gmail.com","address":{"@type":"PostalAddress","streetAddress":"22D rue Georges Gaumé","addressLocality":"Maisons-Alfort","postalCode":"94700","addressCountry":"FR"},"areaServed":"Maisons-Alfort","priceRange":"€€"}
 </script>{% endraw %}
 {% endif %}<link rel="stylesheet" href="assets/css/style.css?v={{ build }}">
 </head>
@@ -31,6 +33,7 @@
     </a>
     <nav aria-label="Navigation principale">
       <ul class="menu" id="menu">
+        <li><a href="index.html"{% if page.url == '/index.html' or page.url == '/' %} aria-current="page"{% endif %}>Accueil</a></li>
         <li><a href="accompagnements.html"{% if navId == 'accompagnements' %} aria-current="page"{% endif %}>Accompagnements</a></li>
         <li><a href="entreprise.html"{% if navId == 'entreprise' %} aria-current="page"{% endif %}>Entreprise</a></li>
         <li><a href="apropos.html"{% if navId == 'apropos' %} aria-current="page"{% endif %}>À propos</a></li>
